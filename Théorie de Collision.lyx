@@ -1,0 +1,8745 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass book
+\begin_preamble
+
+
+
+
+\usepackage{color}
+\usepackage{babel}
+
+\addto\extrasfrench{
+    \providecommand{\og}{\leavevmode\flqq~}
+    \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}}
+
+
+
+
+
+
+
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+
+\usepackage{tikz}
+\usepackage{tikz-3dplot}\usepackage{pgfplots}
+\usepackage{physics}
+\usepackage{relsize}
+
+
+\usetikzlibrary{calc, patterns, angles, quotes, shapes}
+
+\pagenumbering{roman}
+\let\myTOC\tableofcontents
+\renewcommand{\tableofcontents}{
+    \pdfbookmark[1]{\contentsname}{}
+    \myTOC
+    \cleardoublepage
+    \pagenumbering{arabic}}
+
+\renewcommand{\i}{\mathrm{i}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\opr}[1]{\mathrm{\hat{#1}}}
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\identity}{\mathbb{1}}
+\newcommand{\pvec}[1]{\vec{#1} \mkern2mu \vphantom{#1}}
+\newcommand{\bigint}[2]{\mathop{\mathlarger{\int_{#1}^{#2}}}}
+\newcommand{\Bigint}[2]{\mathop{\mathlarger{\mathlarger{\mathlarger{\int_{#1}^{#2}}}}}}
+\newcommand{\removeintspace}{\!\!\!\!\!\!\!\!}
+
+\DeclareMathOperator*{\res}{Res}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Définition}
+
+\theoremstyle{definition}
+\newtheorem*{example}{Example}
+
+\theoremstyle{definition}
+\newtheorem*{examples}{Examples}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remarque}
+
+\theoremstyle{definition}
+\newtheorem*{application}{Application}
+\end_preamble
+\use_default_options false
+\begin_modules
+theorems-ams
+\end_modules
+\maintain_unincluded_children false
+\language french
+\language_package default
+\inputencoding utf8
+\fontencoding T1
+\font_roman "palatino" "default"
+\font_sans "helvet" "default"
+\font_typewriter "courier" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_title "Théorie de Collision"
+\pdf_author "Mohamed Amine Boussoubel/Abderrahmane Labane"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 2
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "linkcolor=black,citecolor=black,urlcolor=blue,filecolor=blue,pdfpagelayout=OneColumn,pdfnewwindow=true,pdfstartview=XYZ,plainpages=false"
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 2
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style french
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Théorie de Collision
+\end_layout
+
+\begin_layout Author
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Processus de collision en mécanique quantique
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+La plupart des découvertes en physique sont le résultat d'expériences de
+ collision.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{examples}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Découvertes du noyau atomique par 
+\shape smallcaps
+Rutherford
+\shape default
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Spectroscopie nucléaire et atomique.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Fission nucléaire.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Découverte des particules élémentaires et leurs propriétés.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{examples}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce chapitre sera consacré aux notions élémentaires concernant les problèmes
+ de collision.
+ Les résultats des expériences dans ce domain s'expriment au moyen de quantités
+ appelées 
+\series bold
+sections efficaces
+\series default
+.
+ Ces dernières sont direcement liées au comportement asymptotique des solutions
+ stationnaires de l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+.
+\end_layout
+
+\begin_layout Section
+Déscription classique d'une collision
+\end_layout
+
+\begin_layout Standard
+On dit qu'il y a collision entre deux ou plusieurs particules quand elles
+ subissent une interaction mutuelle de courte durée et de courte portée.
+ Cette collision est localisée dans le temps et dans l'espace.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En règle générale, les forces d'interaction sont négligeables quant les
+ particules sont suffisament éloignées.
+ On peut donc déstingué un 
+\series bold
+avant
+\series default
+ et un 
+\series bold
+après
+\series default
+ la collision.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](-4, -1.5) -- (4, 1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](-4, 1.5) -- (4, -1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = orange!60!yellow](0, 0) ellipse (2cm and
+ 1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at (0, 0) {Zone 
+\backslash
+
+\backslash
+ d'interaction};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4, -1.5) -- (-4 * 0.75, -1.5 * 0.75);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * 0.95, -1.5 * 0.95) {${
+\backslash
+vec{v}}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](-4, -1.5) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (-4 * 1.05, -1.5 * 1.05) {${m}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](4, 1.5) -- (4 * 0.75, 1.5 * 0.75);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (4 * 0.95, 1.5 * 0.95) {${
+\backslash
+vec{v}}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](4, 1.5) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south west] at (4 * 1.05, 1.5 * 1.05) {${m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](4 * 0.75, -1.5 * 0.75) -- (4, -1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south west] at (4 * 1.05 * 0.75, -1.5 * 1.05 *
+ 0.75) {${
+\backslash
+pvec{v}}_{
+\backslash
+! 1}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](4 * 0.75, -1.5 * 0.75) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (4 * 0.95 * 0.75, -1.5 * 0.85 *
+ 0.75) {${m}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4 * 0.75, 1.5 * 0.75) -- (-4, 1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (-4 * 1.05 * 0.75, 1.5 * 1.05 *
+ 0.75) {${
+\backslash
+pvec{v}}_{
+\backslash
+! 2}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](-4 * 0.75, 1.5 * 0.75) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * 0.95 * 0.75, 1.5 * 0.85 *
+ 0.75) {${m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Collision élastique de 2 particules
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Connaissant les vitesses 
+\begin_inset Formula ${\vec{v}}_{i}$
+\end_inset
+
+, on peut déduire des informations sur les vitesses 
+\begin_inset Formula ${\pvec{v}}_{\!i}'$
+\end_inset
+
+ et vice versa.
+\end_layout
+
+\begin_layout Subsection
+Grandeurs conservées
+\end_layout
+
+\begin_layout Standard
+Malgré notre connaisance partielle du problème, on peut obtenir certaines
+ informations grâce aux lois de conservation.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On considère que le système 
+\begin_inset Formula $\mathcal{S}$
+\end_inset
+
+ de deux particules est isolé de l'extérieur.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+1em
+\end_layout
+
+\begin_layout Itemize
+Conservation de la quantité de mouvement totale : 
+\begin_inset Formula 
+\[
+\frac{\diff{\vec{P}}_{\mathcal{S}}}{\diff t}={\vec{F}}^{ext}=0,\qquad{\vec{P}}_{\mathcal{S}}=\sum_{i}^{N}{\vec{p}}_{i}=\sum_{i}^{N'}{\pvec{p}}_{\!i}'={\pvec{P}}_{\!\mathcal{S}}'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Conservation de l'énergie totale : 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Si les forces d'interaction entre les particules dérivent d'une énergie
+ potentielle (forces conservatives), alors l'énergie totale du système s'écrit
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{E}_{T}^{\mathcal{S}}={E}_{c}^{\mathcal{S}}+{E}_{p}^{\mathcal{S}}+\sum_{i}^{N}{U}_{i}={E'}_{\!\!c}^{\mathcal{S}}+{E'}_{\!\!p}^{\mathcal{S}}+\sum_{i}^{N'}{U'}_{\!\!i}={E'}_{\!\!T}^{\mathcal{S}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${E}_{c}^{\mathcal{S}},\ {E}_{p}^{\mathcal{S}}$
+\end_inset
+
+ et 
+\begin_inset Formula ${U}_{i}$
+\end_inset
+
+ sont les énergies cinétique, potentielle (l'interaction entre les particules)
+ et interne, respectivement.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si on néglige les interactions entre particules, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{E}_{c}^{\mathcal{S}}+\sum_{i}^{N}{U}_{i}={E'}_{\!\!c}^{\mathcal{S}}+\sum_{i}^{N'}{U'}_{\!\!i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N$
+\end_inset
+
+ et 
+\begin_inset Formula $N'$
+\end_inset
+
+ est le nombre de particules avant et après la collision.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Collision élastique
+\end_layout
+
+\begin_layout Standard
+On dit qu'il y a collision élastique lorsque avant et après la collision
+ on a :
+\end_layout
+
+\begin_layout Itemize
+Le nombre de particules reste constant.
+\end_layout
+
+\begin_layout Itemize
+L'énergie interne de chaque particule reste inchangée.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En d'autre terme, les particules ne se déforment pas et ne changent pas
+ de nature.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les lois de conservation sont donc :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{m}_{i}^{\mathcal{S}}={m'}_{\!\!i}^{\mathcal{S}}\!\!\!,\qquad{\vec{P}}_{\mathcal{S}}={\pvec{P}}_{\!\mathcal{S}}',\qquad{E}_{T}^{\mathcal{S}}={E'}_{\!\!T}^{\mathcal{S}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{examples}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Collision entre les balles de billard.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Diffusion de 
+\shape smallcaps
+Rutherford
+\shape default
+ (diffusion d'un noyau 
+\begin_inset Formula $\ce{_{2}^{4}He++}$
+\end_inset
+
+ par un noyau positif).
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{examples}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_outcome_dir1) at ({cos(45 + atan(-1.5 / -4))}, {sin(45 +
+ atan(-1.5 / -4))});
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_outcome_dir2) at ({cos(-35 + atan(-1.5 / -4))}, {sin(-35
+ + atan(-1.5 / -4))});
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (end) at (4 * 0.5, 1.5 * 0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](-4, -1.5) -- (origin);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, very thick, loosely dotted](origin) -- (end);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](origin) -- ($(vec_outcome_dir1)
+ + (vec_outcome_dir1)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](origin) -- ($(vec_outcome_dir2)
+ + (vec_outcome_dir2)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4, -1.5) -- (-4 * 0.75, -1.5 * 0.75);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * 0.95, -1.5 * 0.95) {${
+\backslash
+vec{v}}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](-4, -1.5) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (-4 * 1.05, -1.5 * 1.05) {${m}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](-4 * 0.5, -1.5 * 0.5) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south west] at (-4 * 0.5 * 1.05, -1.5 * 0.4 *
+ 1.05) {${m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](vec_outcome_dir1) -- ($(vec_outcome_dir1) +
+ (vec_outcome_dir1)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at ($(vec_outcome_dir1) + (vec_outcome
+_dir1)$) {${
+\backslash
+pvec{v}}_{
+\backslash
+! 1}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](vec_outcome_dir1) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_outcome_dir1) {${m}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](vec_outcome_dir2) -- ($(vec_outcome_dir2) +
+ (vec_outcome_dir2)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at ($(vec_outcome_dir2) + (vec_outcome
+_dir2)$) {${
+\backslash
+pvec{v}}_{
+\backslash
+! 2}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](vec_outcome_dir2) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (vec_outcome_dir2) {${m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+pic[draw, <->, "${
+\backslash
+theta}_{1}$", angle eccentricity = 1.5] {angle = end--origin--vec_outcome_dir1};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+pic[draw, <->, "${
+\backslash
+theta}_{2}$", angle eccentricity = 1.5] {angle = vec_outcome_dir2--origin--end};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Collision de 2 particules, 
+\begin_inset Formula ${m}_{2}$
+\end_inset
+
+ est au repos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les lois de conservation donnent :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+{m}_{1}{\vec{v}}_{1}={m}_{1}{\pvec{v}}_{\!1}'+{m}_{2}{\pvec{v}}_{\!2}'\\
+\frac{1}{2}{m}_{1}{v}_{1}^{2}=\frac{1}{2}{m}_{1}{v'}_{\!\!1}^{2}+\frac{1}{2}{m}_{2}{v'}_{\!\!2}^{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Collision inélastique
+\end_layout
+
+\begin_layout Standard
+On dit qu'une collision est inélastique lorsqu'une partie de l'énergie cinétique
+ initiale du système s'est transformée en d'autre formes d'énergie.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La collision s'accompagne alors d'une variation d'énergie interne et/ou
+ d'une modification du nombre de particules.
+ Certaines peuvent être créées pas fragmentation ou par équivalence masse-énergi
+e.
+\end_layout
+
+\begin_layout Example
+Réaction chimique.
+ 
+\end_layout
+
+\begin_layout Standard
+Lorsqu'on laisse tomber une pâte à modeler, celle-ci ne rebondit pas, toute
+ l'énergie cinétique acquise par la boule avant l'impact est convertie en
+ énergie interne d'où une déformation et un échauffement du projectile.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement !h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (end) at (4 * 0.5, 1.5 * 0.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[gray, ultra thick, loosely dotted](-4, -1.5) -- (end);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4, -1.5) -- (-4 * 0.75, -1.5 * 0.75);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * 0.95, -1.5 * 0.95) {${
+\backslash
+vec{v}}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](-4, -1.5) circle (0.15cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (-4 * 1.05, -1.5 * 1.05) {${m}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](-4 * 0.5, -1.5 * 0.5) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south west] at (-4 * 0.5 * 1.05, -1.5 * 0.4 *
+ 1.05) {${m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](-4 * -0.15, -1.5 * -0.15) circle (0.15cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](-4 * -0.3, -1.5 * -0.3) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4 * -0.3, -1.5 * -0.3) -- (-4 * -0.45, -1.5 * -0.45);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * -0.3, -1.5 * -0.3) {$
+\backslash
+pvec{v}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (-4 * -0.1, -1.5 * 0.1) {${m}_{1}
+ + {m}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Collision de 2 particules, 
+\begin_inset Formula ${m}_{2}$
+\end_inset
+
+ est au repos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ici, la particule 
+\begin_inset Formula ${m}_{1}$
+\end_inset
+
+ heurte une cible immobile 
+\begin_inset Formula ${m}_{2}$
+\end_inset
+
+, puis elle se lie à elle.
+ En effet, après la collision, l'ensemble se déplace à la vitesse 
+\begin_inset Formula $\pvec{v}'$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les lois de conservation s'écrivent :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+{m}_{1}{\vec{v}}_{1}=\left({m}_{1}+{m}_{2}\right)\pvec{v}'\\
+\frac{1}{2}{m}_{1}{v}_{1}^{2}+Q=\frac{1}{2}\left({m}_{1}+{m}_{2}\right){v'}^{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Q$
+\end_inset
+
+ représente l'énergie perdue.
+\end_layout
+
+\begin_layout Standard
+Soit 
+\begin_inset Formula $\ce{_{Z}^{A}X}$
+\end_inset
+
+ un noyau au repos de masse 
+\begin_inset Formula $M$
+\end_inset
+
+ qui se désintègre en deux noyaux 
+\begin_inset Formula $\ce{_{{Z}_{1}}^{{A}_{1}}{X}_{1}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\ce{_{{Z}_{2}}^{{A}_{2}}{X}_{2}}$
+\end_inset
+
+ de masses 
+\begin_inset Formula ${m}_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula ${m}_{2}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Q$
+\end_inset
+
+ est l'énergie libérée par la réaction nucléaire.
+ Dans ce cas :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+M\neq{m}_{1}+{m}_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Delta m=M-\left({m}_{1}+{m}_{2}\right)$
+\end_inset
+
+ est responsable, par équivalence énergie masse, de l'énergie libérée :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Q=\Delta m{c}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les lois de conservation s'écrivent :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+{m}_{1}{\pvec{v}}_{\!1}'+{m}_{2}{\pvec{v}}_{\!2}'=0\\
+Q=\frac{1}{2}{m}_{1}{v'}_{\!\!1}^{2}+\frac{1}{2}{m}_{2}{v'}_{\!\!2}^{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{remark}
+\end_layout
+
+\end_inset
+
+ Dans la littérature, on trouve parfois trois types de collisions :
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+0.5em
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Collision élastique : mêmes particules avant et après la collision.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Collision inélastique : seule l'énergie interne des particules qui change.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Collision parfaitement inélastique : dans ce cas, en plus du changement
+ de l'énergie interne des particules, leur nombre ou nature deviennent différent
+s après la collision.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{remark}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Référentiel de centre de masse
+\end_layout
+
+\begin_layout Standard
+Les mouvements des particules sont corrélés car elles interagissent à travers
+ le potentiel 
+\begin_inset Formula $V=V({\vec{r}}_{1}-{\vec{r}}_{2})$
+\end_inset
+
+ dans le cas de deux particules.
+ On ne peut donc pas effectuer une séparation de variables entre 
+\begin_inset Formula ${\vec{r}}_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula ${\vec{r}}_{2}$
+\end_inset
+
+.
+ Par contre, une séparation de variables est possible entre la coordonnée
+ de centre de masse 
+\begin_inset Formula $\mathcal{CM}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_x) at (4, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_y) at (0, 4);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_r1) at (2.5, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_r2) at (1, 2.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_rcm) at (1.75, 1.75);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (origin) {$o$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_x);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_x) {$x$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_y);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_y) {$y$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = red!40](vec_r1) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+filldraw[color = black, fill = green!40](vec_r2) circle (0.25cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_r1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_r1) {${
+\backslash
+vec{r}}_{1}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_r2);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_r2) {${
+\backslash
+vec{r}}_{2}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, thick, ->, loosely dotted](vec_r2) -- (vec_r1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south west] at ($(vec_r2)!0.5!(vec_r1)$) {$
+\backslash
+vec{r}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[blue, thick, ->](origin) -- (vec_rcm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at ($(vec_rcm) - (-0.25, 0.5)$)
+ {
+\backslash
+footnotesize ${
+\backslash
+vec{R}}_{
+\backslash
+mathcal{CM}}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\vec{R}}_{\mathcal{CM}}=\frac{{m}_{1}{\vec{r}}_{1}+{m}_{2}{\vec{r}}_{2}}{M},\qquad M={m}_{1}+{m}_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et la coordonnée relative entre les deux particules 
+\begin_inset Formula $1$
+\end_inset
+
+ et 
+\begin_inset Formula $2$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\vec{r}={\vec{r}}_{1}-{\vec{r}}_{2},\qquad\frac{1}{\mu}=\frac{1}{{m}_{1}}+\frac{1}{{m}_{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu$
+\end_inset
+
+ est la masse réduite du système.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Par conséquent, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}{\vec{V}}_{\mathcal{CM}}=\frac{{m}_{1}{\vec{v}}_{1}+{m}_{2}{\vec{v}}_{2}}{M} & \iff{\vec{P}}_{\mathcal{CM}}={\vec{p}}_{1}+{\vec{p}}_{2}\\
+\vec{v}={\vec{v}}_{1}-{\vec{v}}_{2} & \iff\vec{p}=\frac{{m}_{1}{\vec{p}}_{1}-{m}_{2}{\vec{p}}_{2}}{M}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Hamiltonien classique
+\end_layout
+
+\begin_layout Standard
+Dans un référentiel d'inertie, l'énergie mécanique du système de deux particules
+ est :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{H}_{\mathcal{S}}=\frac{{\vec{p}}_{1}^{2}}{2{m}_{1}}+\frac{{\vec{p}}_{2}^{2}}{2{m}_{2}}+V({\vec{r}}_{1}-{\vec{r}}_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En se basant sur les relations donnant les positions 
+\begin_inset Formula ${\vec{R}}_{\mathcal{CM}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{cases}
+{\vec{r}}_{1}={\vec{R}}_{\mathcal{CM}}+\frac{{m}_{2}}{M}\vec{r}\\
+{\vec{r}}_{2}={\vec{R}}_{\mathcal{CM}}-\frac{{m}_{1}}{M}\vec{r}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En repportant les expressions de 
+\begin_inset Formula ${\vec{r}}_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula ${\vec{r}}_{1}$
+\end_inset
+
+ dans celle de 
+\begin_inset Formula ${H}_{\mathcal{S}}$
+\end_inset
+
+ et en tenant compte de l'expression de 
+\begin_inset Formula ${\vec{R}}_{\mathcal{CM}}$
+\end_inset
+
+, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{H}_{\mathcal{S}} & =\frac{1}{2}M{\vec{V}}_{\mathcal{CM}}^{2}+\frac{1}{2}\mu{\vec{v}}^{2}+V(\vec{r})\\
+ & =\frac{{\vec{P}}_{\mathcal{CM}}^{2}}{2M}+\frac{{\vec{p}}^{2}}{2\mu}+V(\vec{r})
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+1em
+\end_layout
+
+\begin_layout Itemize
+Le premier terme représente l'énergie cinétique du centre de masse 
+\begin_inset Formula $\mathcal{CM}$
+\end_inset
+
+ dans le référentiel d'inertie.
+ Ce terme est nul dans le référentiel de centre de masse.
+\end_layout
+
+\begin_layout Itemize
+Le deuxième terme représente l'énergie du système de deux particules dans
+ le référentiel de centre de masse.
+\end_layout
+
+\begin_layout Itemize
+L'étude du mouvement relatif des deux particules dans le référentiel de
+ CM se mène donc à celle du mouvement de la particule relative de mass 
+\begin_inset Formula $\mu$
+\end_inset
+
+, de position 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ et d'impulsion 
+\begin_inset Formula $\vec{p}$
+\end_inset
+
+ plongé dans le potentiel 
+\begin_inset Formula $V(\vec{r})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsection
+Section efficace
+\end_layout
+
+\begin_layout Standard
+La modélisation de la collision fait intervenir la notion de 
+\series bold
+sections efficace
+\series default
+.
+ Celle-ci est intimement liée à la notion de 
+\series bold
+probabilité de diffusion
+\series default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le but de cette modélisation est de pouvoir calculer 
+\series bold
+le nombre de collisions qui vont se produire
+\series default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le faisceau incident est caractérisé par sa section transversale de surface
+ 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ est la surface de recouvrement (tube de collision) du faisceau sur la cible.
+ Elle est perpendiculaire au faisceau incident.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le module de son courant 
+\begin_inset Formula $\vec{j}$
+\end_inset
+
+ est donné par 
+\begin_inset Formula $j=Dv$
+\end_inset
+
+, où 
+\begin_inset Formula $v$
+\end_inset
+
+ est la vitesse moyenne des particules incidentes (projectiles) et 
+\begin_inset Formula $D$
+\end_inset
+
+ la densité des particules incidentes 
+\begin_inset Formula $n$
+\end_inset
+
+ par unité de volume 
+\begin_inset Formula $\tau$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+j=\frac{n}{\tau}v=\frac{n}{S\Delta l}\frac{\Delta l}{\Delta t}=\frac{n}{S\Delta t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ceci permet d'écrire par définition le nombre 
+\begin_inset Formula $n$
+\end_inset
+
+ de particules traversant la surface 
+\begin_inset Formula $S$
+\end_inset
+
+ normale au faisceau incident pendant l'intervalle de temps 
+\begin_inset Formula $\diff t$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\diff n=\vec{J}\cdot\vec{\diff S}\,\diff t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ définit le nombre de particules traversant l'unité de surface par unité
+ de temps.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Introduisons maintenant le nombre de collisions 
+\begin_inset Formula ${N}_{collision}$
+\end_inset
+
+ (projectiles-cible) par unité de temps.
+ Ce nombre est propotionnel au courant 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{N}_{collision}=\sigma j
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sigma$
+\end_inset
+
+ est une section efficace.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ La section efficace est une grandeur centrale caractérisant la collision
+ entre particules.
+ Physiquement, elle représente le taux ou la probabilité d'une diffusion
+ malgré qu'elle possède les dimensions d'une surface.
+ Elle dépend du potentiel d'interaction entre les deux particules.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Déscription quantique d'une collision
+\end_layout
+
+\begin_layout Standard
+Les particules incidentes et la cible ont une structure interne :
+\end_layout
+
+\begin_layout Itemize
+Particule élémentaire (électron, proton, neutron) : spin
+\end_layout
+
+\begin_layout Itemize
+Particule complexe ou composée (atome, molécule, ion) : nombre quantique
+ 
+\begin_inset Formula $(n,\ l,\ m,\ s)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_k) at (1.7, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4, 0.5) -- ($(-4, 0.5) + (vec_k)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-4, -0.5) -- ($(-4, -0.5) + (vec_k)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(-4, -1.25)$) {
+\backslash
+small $E 
+\backslash
+propto 
+\backslash
+frac{1}{
+\backslash
+lambda}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+foreach 
+\backslash
+x in {0, 1, 2, 3, 4, 5} {
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+foreach 
+\backslash
+y in {0, 1, 2, 3, 4, 5} {
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, thick]($(origin) + (1 + 
+\backslash
+x * 0.4, 1 - 
+\backslash
+y * 0.4)$) circle (1.5pt);
+\end_layout
+
+\begin_layout Plain Layout
+
+                }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, <->]($(origin) + (1.8, -1)$) -- ($(origin) + (2.2, -1)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(origin) + (2.0, -1.3)$) {
+\backslash
+small $d 
+\backslash
+gg 
+\backslash
+lambda$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(-4, -2)$) {Particules incidents};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(2, -2)$) {La cible (mince)};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Propriétés du faisceau incident :
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+0.5em
+\end_layout
+
+\begin_layout Itemize
+Monoénergétique.
+\end_layout
+
+\begin_layout Itemize
+Contient du faible nombre de particules (pour ne pas avoir beaucoup d'interactio
+n entre elles).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Propriétés de la cible :
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+0.5em
+\end_layout
+
+\begin_layout Itemize
+Un grande nombre de particules (pour assurer une collision).
+\end_layout
+
+\begin_layout Itemize
+La distance interne entre les particules de la cible est supérieure à la
+ longeure d'onde du faisceau incident.
+\end_layout
+
+\begin_layout Itemize
+La cible et suffisamment minces pour éviter les diffusion multiples.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Types de collisions :
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+1.0em
+\end_layout
+
+\begin_layout Itemize
+Élastique : 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{A + B -> A + B}
+\end_layout
+
+\end_inset
+
+, rien n'a changé dans la structure quantique interne des particules (à
+ part leur trajectoire).
+\end_layout
+
+\begin_layout Itemize
+Inélastique : 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{A + B -> A^{'} + B^{'}}
+\end_layout
+
+\end_inset
+
+, il y a un changement dans les trajectoires des particules et dans la structure
+ interne (
+\series bold
+e.g.
+
+\series default
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Formula $s=\frac{1}{2}$
+\end_inset
+
+ devient 
+\begin_inset Formula $s=-\frac{1}{2}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Parfaitement inélastique : 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{A + B -> C + D}
+\end_layout
+
+\end_inset
+
+, il y a un changement dans les particules élémentaires : A et B changera
+ en C et D.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{examples}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{e+ + H -> e+ + H}
+\end_layout
+
+\end_inset
+
+ (diffusion élastique).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{e+ + H -> e+ + H^{*}}
+\end_layout
+
+\end_inset
+
+ (diffusion inélastique).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{e+ + H -> e+ + p + e-}
+\end_layout
+
+\end_inset
+
+ (réaction d'ionisation).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{e+ + H -> p + 2
+\backslash
+gamma}
+\end_layout
+
+\end_inset
+
+ (réaction d'annihilation).
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ce{e+ + H -> p + (e+ + e- )}
+\end_layout
+
+\end_inset
+
+ (réarrangement).
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{examples}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans tous les cas, l'énergie de la particule incidente est différente.
+\end_layout
+
+\begin_layout Subsection
+Équation d'onde stationnaire
+\end_layout
+
+\begin_layout Standard
+On a un système de deux particules 
+\begin_inset Formula $({m}_{1},\ {\vec{r}}_{1},\ {\vec{p}}_{1})$
+\end_inset
+
+ et 
+\begin_inset Formula $({m}_{2},\ {\vec{r}}_{2},\ {\vec{p}}_{2})$
+\end_inset
+
+, elles interagissent par un potentiel 
+\begin_inset Formula $V({\vec{r}}_{2}-{\vec{r}}_{1})$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'Hamiltonien du système est donné par :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{\mathcal{S}}=\frac{{\opr{p}}_{1}^{2}}{2{m}_{1}}+\frac{{\opr{p}}_{2}^{2}}{2{m}_{2}}+V({\vec{r}}_{2}-{\vec{r}}_{1})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc, on a l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{\mathcal{S}}\Psi({\vec{r}}_{1},\ {\vec{r}}_{2},\ t)=\i\hbar\frac{\partial\Psi({\vec{r}}_{1},\ {\vec{r}}_{2},\ t)}{\partial t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nous avons donc une équation à 7 variables.
+ Le cas au l'Hamiltonien ne dépend pas du temps, on peut faire une séparation
+ de variables.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi({\vec{r}}_{1},\ {\vec{r}}_{2},\ t)=\Phi({\vec{r}}_{1},\ {\vec{r}}_{2})f(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La condition de normalization 
+\begin_inset Formula $\bigint{}{}\!\!{\left\lvert \Psi({\vec{r}}_{1},\ {\vec{r}}_{2},\ t)\right\rvert }^{2}\ {\diff}^{3}{r}_{1}\,{\diff}^{3}{r}_{2}\,\diff t=1$
+\end_inset
+
+ implique :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\bigint{}{}\!\!{\left\lvert \Phi({\vec{r}}_{1},\ {\vec{r}}_{2})\right\rvert }^{2}\ {\diff}^{3}{r}_{1}\,{\diff}^{3}{r}_{2} & =1\\
+\bigint{}{}\!\!{\left\lvert {f}(t)\right\rvert }^{2}\ \diff t & =1
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc 
+\begin_inset Formula $f(t)={\e}^{\pm\i\omega t}$
+\end_inset
+
+, avec 
+\begin_inset Formula $\omega=\frac{{E}_{\mathcal{S}}}{\hbar}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notre potentiel ne dépend que de 
+\begin_inset Formula ${\vec{r}}_{2}-{\vec{r}}_{1}$
+\end_inset
+
+, alors 
+\begin_inset Formula ${\opr{H}}_{\mathcal{S}}$
+\end_inset
+
+ est indépendant du temps, on a donc :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{\mathcal{S}}\Phi({\vec{r}}_{1},\ {\vec{r}}_{2})={E}_{\mathcal{S}}\Phi({\vec{r}}_{1},\ {\vec{r}}_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Référentiel de centre de masse
+\end_layout
+
+\begin_layout Standard
+L'Hamiltonien du système s'écrit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{\mathcal{S}}={\opr{H}}_{\mathcal{CM}}+\opr{H}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec : 
+\begin_inset Formula 
+\begin{align*}
+\begin{split}{\opr{H}}_{\mathcal{CM}} & =\frac{{\opr{P}}_{\mathcal{CM}}^{2}}{2M},\qquad\qquad M={m}_{1}+{m}_{2}\\
+\opr{H} & =\frac{{\opr{p}}^{2}}{2\mu}+V(\vec{r}),\qquad\mu=\frac{{m}_{1}{m}_{2}}{{m}_{1}+{m}_{2}}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'ensemble 
+\begin_inset Formula $\Big\{{\opr{H}}_{\mathcal{S}},\ {\opr{H}}_{\mathcal{CM}},\ \opr{H}\Big\}$
+\end_inset
+
+ forme un 
+\series bold
+ECOC
+\series default
+ (ensemble complet d'observables qui commutent).
+ donc il ont un système de vecteurs propres communes.
+ 
+\begin_inset Formula $\Big\{\!\ket{\chi}\!\Big\}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}{\opr{H}}_{\mathcal{CM}}\ket{\chi} & ={E}_{\mathcal{CM}}\ket{\chi}\\
+\opr{H}\ket{\chi} & =E\ket{\chi}\\
+{\opr{H}}_{\mathcal{S}}\ket{\chi} & =\left({E}_{\mathcal{CM}}+E\right)\ket{\chi}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'espace d'
+\shape smallcaps
+Hilbert
+\shape default
+ des états est 
+\begin_inset Formula ${\mathcal{H}}_{\mathcal{S}}={\mathcal{H}}_{\mathcal{CM}}\otimes\mathcal{H}$
+\end_inset
+
+, et on a comme vecteur 
+\begin_inset Formula $\ket{\Phi}\in{\mathcal{H}}_{\mathcal{S}}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{\Phi}=\ket{\xi}\otimes\ket{\eta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec 
+\begin_inset Formula $\ket{\xi}\in{\mathcal{H}}_{\mathcal{CM}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\ket{\eta}\in\mathcal{H}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $V(\vec{r})$
+\end_inset
+
+ dépend de 
+\begin_inset Formula $r=\left\lVert {\vec{r}}_{2}-{\vec{r}}_{1}\right\rVert $
+\end_inset
+
+ (et non pas de 
+\begin_inset Formula $\vec{r}={\vec{r}}_{2}-{\vec{r}}_{1})$
+\end_inset
+
+, le potentiel est dit potentiel central.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc on a transformé notre problème à un problème de diffusion d'une particule
+ 
+\begin_inset Formula $(\mu,\ \vec{r},\ \vec{p})$
+\end_inset
+
+ par un potentiel central 
+\begin_inset Formula $V(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Onde stationnaire de diffusion
+\end_layout
+
+\begin_layout Standard
+Soit 
+\begin_inset Formula $E$
+\end_inset
+
+ l'énergie de la particule relative 
+\begin_inset Formula $(\mu,\ \vec{r},\ \vec{p})$
+\end_inset
+
+, 
+\begin_inset Formula $\vec{p}=\hbar\vec{k}$
+\end_inset
+
+.
+ Quand 
+\begin_inset Formula $V(r)=0$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\frac{{p}^{2}}{2\mu}=\frac{{\hbar}^{2}{k}^{2}}{2\mu}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le faisceau est large, donc le nombre de particules non-diffusées est très
+ grand par rapport au nombre de particules diffusées.
+ Ces particules transmises ne seront pas diffusées par 
+\begin_inset Formula $V(r)$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ s'écrit sous la forme :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[-\frac{{\hbar}^{2}}{2\mu}\laplacian+V(r)\right]\Psi(\vec{r})=E\Psi(\vec{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cette équation admet une infinité de solutions (une pour chaque valeur de
+ 
+\begin_inset Formula $k$
+\end_inset
+
+).
+ Mais, il faut choisir pour celle-ci, celle qui correspond au problème étudie.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Avant d'entrer (selon la direction 
+\begin_inset Formula $oz$
+\end_inset
+
+) dans la zone d'action de 
+\begin_inset Formula $V(r)$
+\end_inset
+
+, la particule est considérée comme une onde plane :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{inc}(\vec{r})={\e}^{\i kz}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Après la diffusion, le paquet d'onde est égale à une partie d'onde transmise,
+ plus une partie d'onde diffusé.
+ On a par définition le comportement asymptotique suivant (pour 
+\begin_inset Formula $r\to\infty$
+\end_inset
+
+) :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(\vec{r})=\underbrace{{\e}^{\i kz}\vphantom{f(\theta,\ \phi)\frac{{\e}^{\i kr}}{r}}}_{\text{onde transmise}}+\qquad\underbrace{f(\theta,\ \phi)\frac{{\e}^{\i kr}}{r}}_{\text{onde diffusée}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc, l'onde diffusée dépend de 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ et l'angle solid 
+\begin_inset Formula $\Omega=(\theta,\ \phi)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $f(\theta,\ \phi)$
+\end_inset
+
+ est appelée 
+\series bold
+amplitude de diffusion
+\series default
+.
+\end_layout
+
+\begin_layout Chapter
+Diffusion par un potentiel central
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+L'analyse d'une collision se fait en décrivant le problème en termes des
+ coordonnées relatives et du centre de masse 
+\begin_inset Formula $\mathcal{CM}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La dynamique du centre de masse est triviale, et on se concentre sur le
+ mouvement relatif qui est décrit par l'Hamiltonien d'une particule de la
+ masse réduite en interaction avec un potentiel sacré à l'origine.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nous avons déjà fait ça dans le chapitre précédent.
+ Donc, nous allons nous concentrer sur le problème relatif ainsi formulé.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La mesure qu'on fait dans une experience de collision, et donc la grandeur
+ qu'on veut calculer est la section efficace différentielle :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega}=\frac{{j}_{dif}}{{j}_{inc}}{r}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En tenant compte de l'expression de l'onde diffusée que nous avons déjà
+ calculé :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(\vec{r})={\e}^{\i\vec{k}\cdot\vec{r}}+f(\theta,\ \phi)\frac{{\e}^{\i kr}}{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a trouvé :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega}={\left\lvert {f}(\theta,\ \phi)\right\rvert }^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans ce chapitre on va calculer cette section efficace dans le cas d'une
+ diffusion d'une particule de masse 
+\begin_inset Formula $m$
+\end_inset
+
+ pour un potentiel central 
+\begin_inset Formula $V(r)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Résolution de l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ en coordonnées sphériques
+\end_layout
+
+\begin_layout Standard
+Pour calculer la section efficace, il faut déterminer la forme asymptotique
+ de l'onde stationnaire 
+\begin_inset Formula $\Psi(\vec{r})$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'Hamiltonien du système s'écrit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{H}=\frac{{\opr{P}}^{2}}{2m}+V(\vec{r})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V(\vec{r})=V(r)$
+\end_inset
+
+ car le problème présente une symmétrie sphérique.
+ Nous utilisons donc les coordonnées sphériques 
+\begin_inset Formula $(r,\ \theta,\ \phi)$
+\end_inset
+
+ où :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+x=r\sin{\theta}\cos{\phi}\\
+y=r\sin{\theta}\sin{\phi}\\
+z=r\cos{\theta}
+\end{cases}\label{ch2eq/1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Il s'agit de trouver le terme cinétique 
+\begin_inset Formula $\frac{{\opr{P}}^{2}}{2m}=-\frac{{\hbar}^{2}}{2m}\laplacian$
+\end_inset
+
+ où :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\laplacian=\frac{{\partial}^{2}}{\partial{x}^{2}}+\frac{{\partial}^{2}}{\partial{y}^{2}}+\frac{{\partial}^{2}}{\partial{z}^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En utilisant les transformations 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, on trouve :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\laplacian & =\frac{{\partial}^{2}}{\partial{r}^{2}}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{1}{{\hbar}^{2}}\frac{{\opr{L}}^{2}}{{r}^{2}},\qquad\vec{L}=\vec{r}\times\vec{p}\\
+{\opr{L}}^{2} & =-{\hbar}^{2}\left(\frac{{\partial}^{2}}{\partial{\theta}^{2}}+\cot{\theta}\frac{\partial}{\partial\theta}+\frac{1}{\sin^{2}\theta}\frac{{\partial}^{2}}{\partial{\phi}^{2}}\right)
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ s'écrit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[-\frac{{\hbar}^{2}}{2m}\left(\frac{{\partial}^{2}}{\partial{r}^{2}}+\frac{2}{r}\frac{\partial}{\partial r}\right)+\frac{1}{2m}\frac{{\opr{L}}^{2}}{{r}^{2}}+V(r)\right]\Psi(r,\ \theta,\ \phi)=E\Psi(r,\ \theta,\ \phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selon les expressions de 
+\begin_inset Formula ${\opr{L}}^{2},\ \opr{H}$
+\end_inset
+
+ et 
+\begin_inset Formula ${\opr{L}}_{z}=-\i\hbar\frac{\partial}{\partial\phi}$
+\end_inset
+
+.
+ On déduit que'ils commutent deux à deux.
+ Donc il admettent au minimum un 
+\series bold
+ECOC
+\series default
+ (ensemble complet d'observables qui commutent).
+ C'est-à-dire, ils partagent un ensemble de fonctions propres communes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut trouver cette ensemble parmi les fonctions propres de 
+\begin_inset Formula ${\opr{L}}^{2}$
+\end_inset
+
+ et 
+\begin_inset Formula ${\opr{L}}_{z}$
+\end_inset
+
+ que nous connaisons déjà, et qui sont les harmoniques sphériques 
+\begin_inset Formula ${Y}_{l}^{m}(\theta,\ \phi)$
+\end_inset
+
+.
+ En effet :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align}
+\begin{split}{\opr{L}}^{2}{Y}_{l}^{m}(\theta,\ \phi) & =l(l+1){\hbar}^{2}{Y}_{l}^{m}(\theta,\ \phi)\\
+{\opr{L}}_{z}{Y}_{l}^{m}(\theta,\ \phi) & =m\hbar{Y}_{l}^{m}(\theta,\ \phi)
+\end{split}
+\label{ch2eq/2}
+\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc, nous peuvons écrire les solutions de l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ sous la forme :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(r,\ \theta,\ \phi)=\sum_{l,m}{R}_{l}(r){Y}_{l}^{m}(\theta,\ \phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Décomposition en onde partielles
+\end_layout
+
+\begin_layout Standard
+Comme le faisceau incident 
+\begin_inset Formula ${\vec{k}}_{0}$
+\end_inset
+
+ est selon la direction 
+\begin_inset Formula $oz$
+\end_inset
+
+, et le potentiel 
+\begin_inset Formula $V(r)$
+\end_inset
+
+ est symmétrique, donc 
+\begin_inset Formula $\Psi(r,\ \theta,\ \phi)$
+\end_inset
+
+ est indépendant de 
+\begin_inset Formula $\phi$
+\end_inset
+
+, ce qui correspond à 
+\begin_inset Formula $m=0$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(r,\ \theta,\ \phi)=\sum_{l}{R}_{l}(r){Y}_{l}^{0}(\theta,\ \phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sachant que 
+\begin_inset Formula ${Y}_{l}^{0}(\theta,\ \phi)\propto{P}_{l}(\cos{\theta})$
+\end_inset
+
+, on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Psi(r,\ \theta,\ \phi)=\sum_{l}{R}_{l}(r){P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En autre, en tenant compte de 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ et en remplaçant dans l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+, on trouve :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[-\frac{{\hbar}^{2}}{2m}\left(\frac{{\partial}^{2}}{\partial{r}^{2}}+\frac{2}{r}\frac{\partial}{\partial r}\right)+\frac{{\hbar}^{2}}{2m}\frac{l(l+1)}{{r}^{2}}+V(r)-E\right]{R}_{l}(r)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nous allons étudier les solutions 
+\begin_inset Formula ${R}_{l}(r)$
+\end_inset
+
+ pour une valeur positive de l'énergie 
+\begin_inset Formula $E=\frac{{\hbar}^{2}}{2m}{k}^{2}$
+\end_inset
+
+.
+ On pose aussi 
+\begin_inset Formula $U(r)=\frac{2m}{{\hbar}^{2}}V(r)$
+\end_inset
+
+, On obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\frac{{\partial}^{2}}{\partial{r}^{2}}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{l(l+1)}{{r}^{2}}-U(r)+{k}^{2}\right]{R}_{l}(r)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Le but est de chercher le paquet d'onde de l'onde diffusée 
+\begin_inset Formula ${\Psi}_{dif}(\vec{r})$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On sait que loin de 
+\begin_inset Formula $V(r)$
+\end_inset
+
+, l'onde est stationnaire.
+ Dans la zone d'influence (
+\begin_inset Formula $V(r)\neq0$
+\end_inset
+
+), le paquet d'onde sera perturbé, il prend la forme sphérique.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On constate qu'il y a une onde transmise et une onde qui se diffuse dans
+ toutes les directions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_z) at (7, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_k) at ({3.5 * cos(60)}, {3.5 * sin(60)});
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (origin) {$o$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](-6, 0) -- (vec_z);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_z) {$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, loosely dotted](0, 0) -- (vec_k);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black]($(vec_k) - (0, 0.4)$) rectangle ($(vec_k) + (1.2, 0.4)$);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(vec_k) + (0.6, 0)$) {
+\backslash
+tiny Détecteur};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick](origin) circle (1cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, thick](origin) circle (1.5cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black](origin) circle (2cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+foreach 
+\backslash
+y in {1, 2, 3} {
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+foreach 
+\backslash
+x in {1, 2, 3, 4, 5, 6, 7, 8, 10} {
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, very thick]($(origin) + ({(1.5 + 
+\backslash
+x * 0.1) * cos(60 * 
+\backslash
+y - (10 * 
+\backslash
+x / 4))}, {(1.5 + 
+\backslash
+x * 0.1) * sin(60 * 
+\backslash
+y - (10 * 
+\backslash
+x / 4))})$) arc (60 * 
+\backslash
+y - 10 * 
+\backslash
+x / 4:60 * 
+\backslash
+y + 10 * 
+\backslash
+x / 4:1.5 + 
+\backslash
+x * 0.1);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, very thick]($(origin) - ({(1.5 + 
+\backslash
+x * 0.1) * cos(60 * 
+\backslash
+y - (10 * 
+\backslash
+x / 4))}, {(1.5 + 
+\backslash
+x * 0.1) * sin(60 * 
+\backslash
+y - (10 * 
+\backslash
+x / 4))})$) arc (60 * 
+\backslash
+y + 180 - 10 * 
+\backslash
+x / 4:60 * 
+\backslash
+y + 180 + 10 * 
+\backslash
+x / 4:1.5 + 
+\backslash
+x * 0.1);
+\end_layout
+
+\begin_layout Plain Layout
+
+                }
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+foreach 
+\backslash
+x in {1, 2, 3, 4} {
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+draw[black, very thick]($(origin) + ({(4 + 
+\backslash
+x * 0.2) * cos(-10)}, {(4 + 
+\backslash
+x * 0.2) * sin(-10)})$) arc (-10:10:4 + 
+\backslash
+x * 0.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\backslash
+draw[black, very thick]($(origin) - ({(4 + 
+\backslash
+x * 0.2) * cos(-10)}, {(4 + 
+\backslash
+x * 0.2) * sin(-10)})$) arc (180 - 10:180 + 10:4 + 
+\backslash
+x * 0.2);
+\end_layout
+
+\begin_layout Plain Layout
+
+            }
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(origin) - (4.5, 1.5)$) {Onde plane};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(origin) + (4.5, -1.5)$) {Onde transmise};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+pic[draw, ->, "$
+\backslash
+theta$", angle eccentricity = 1.5] {angle = vec_z--origin--vec_k};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour une onde stationnaire libre (
+\begin_inset Formula $V(r)=0$
+\end_inset
+
+), l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ est sous la forme :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\laplacian+{k}^{2}\right]\Psi(\vec{r})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et sa solution est donnée par :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{inc}(\vec{r})={\e}^{\i\vec{k}\cdot\vec{r}}={\e}^{\i kz}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'onde diffusée est 
+\begin_inset Formula ${\Psi}_{dif}(\vec{r})={\e}^{\i kz}+\text{onde sphérique}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A fin d'éviter les interférences entre les 2 ondes (plane et sphérique),
+ on fait nous mesures à 
+\begin_inset Formula $r\to\infty$
+\end_inset
+
+.
+ Donc en cherche le comportement asymptotique de notre fonction d'onde.
+\end_layout
+
+\begin_layout Standard
+Une onde sphérique a pour forme 
+\begin_inset Formula $\frac{{\e}^{\i kr}}{r}$
+\end_inset
+
+, le 
+\begin_inset Formula $\frac{1}{r}$
+\end_inset
+
+ exprime la dispersion de l'onde (diminution de son intensité) en l'assimulant
+ à la lumière, donc :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{asy}(\vec{r})={\e}^{\i\vec{k}\cdot\vec{r}}+f(\theta,\ \phi)\frac{{\e}^{\i kr}}{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Solution de l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ asymptotique
+\end_layout
+
+\begin_layout Standard
+Lorsque 
+\begin_inset Formula $r\to\infty$
+\end_inset
+
+, 
+\begin_inset Formula $U(r)=0$
+\end_inset
+
+, on obtient l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\frac{{\partial}^{2}}{\partial{r}^{2}}+\frac{2}{r}\frac{\partial}{\partial r}-\frac{l(l+1)}{{r}^{2}}+{k}^{2}\right]{R}_{l}(r)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En effectant le changement de variable 
+\begin_inset Formula $\rho=kr$
+\end_inset
+
+, notre équation se ramène à celle de 
+\shape smallcaps
+Bessel
+\shape default
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left[\frac{{\partial}^{2}}{\partial{\rho}^{2}}+\frac{2}{\rho}\frac{\partial}{\partial\rho}-\frac{l(l+1)}{{\rho}^{2}}+1\right]{R}_{l}(\rho)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les solutions sont données par les fonctions de 
+\shape smallcaps
+Bessel
+\shape default
+ sphériques 
+\begin_inset Formula ${Z}_{l}(\rho)$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{Z}_{l}(\rho)={A}_{l}{J}_{l}(\rho)+{B}_{l}{N}_{l}(\rho)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc 
+\begin_inset Formula ${Z}_{l}(\rho)$
+\end_inset
+
+ est une composition linéaire des fonctions de 
+\shape smallcaps
+Bessel
+\shape default
+ 
+\begin_inset Formula ${J}_{l}(\rho)$
+\end_inset
+
+ et de 
+\shape smallcaps
+Neumann
+\shape default
+ 
+\begin_inset Formula ${N}_{l}(\rho)$
+\end_inset
+
+, dont les comportement asymptotiques sont :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\lim_{\rho\to\infty}{J}_{l}(\rho) & \sim\frac{\sin\left(\rho-l\frac{\pi}{2}\right)}{\rho}\\
+\lim_{\rho\to\infty}{N}_{l}(\rho) & \sim-\frac{\cos\left(\rho-l\frac{\pi}{2}\right)}{\rho}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\lim_{\rho\to0}{J}_{l}(\rho) & \sim{\rho}^{l}\\
+\lim_{\rho\to0}{N}_{l}(\rho) & \sim\frac{1}{{\rho}^{l+1}}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La solution 
+\begin_inset Formula ${N}_{l}(\rho)$
+\end_inset
+
+ n'est par régulière, donc nous la rejetterons :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{R}_{l}(\rho)={A}_{l}{J}_{l}(\rho)={A}_{l}\frac{\sin\left(\rho-l\frac{\pi}{2}\right)}{\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${R}_{l}(\rho)$
+\end_inset
+
+ représente l'onde plane (
+\begin_inset Formula $V(r)=0$
+\end_inset
+
+), ce qui induit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{inc}(\vec{r})={\e}^{\i kz}=\sum_{l}{A}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Les 
+\begin_inset Formula ${A}_{l}$
+\end_inset
+
+ sont des constantes à déterminer.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Par conséquent, quand 
+\begin_inset Formula $U(r)\neq0$
+\end_inset
+
+, 
+\begin_inset Formula ${R}_{l}(\rho)$
+\end_inset
+
+ qui représent le paquet d'onde stationnaire diffusé sera influencée par
+ 
+\begin_inset Formula $U(r)$
+\end_inset
+
+ tel que :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{R}_{l}^{dif}(r)={C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}+{\delta}_{l}\right)}{kr}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\delta}_{l}$
+\end_inset
+
+ est le déphasage apporté par le potentiel 
+\begin_inset Formula $V(r)$
+\end_inset
+
+ (ou 
+\begin_inset Formula $U(r)$
+\end_inset
+
+).
+ Par conséquent, le paquet d'onde totale prend la forme suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}{C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}+{\delta}_{l}\right)}{kr}{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Calcul de l'amplitude de diffusion
+\end_layout
+
+\begin_layout Standard
+Afin de calculer l'amplitude de diffusion 
+\begin_inset Formula $f(\theta,\ \phi)$
+\end_inset
+
+, on est amené à comparer entre le paquet d'onde en présence de 
+\begin_inset Formula $V(r)$
+\end_inset
+
+ à savoir :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}{C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}+{\delta}_{l}\right)}{kr}{P}_{l}(\cos{\theta})\label{ch2eq/3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et la fonction d'onde asymptotique : 
+\begin_inset Formula 
+\begin{equation}
+{\Psi}_{asy}(\vec{r})={\e}^{\i\vec{k}\cdot\vec{r}}+f(\theta,\ \phi)\frac{{\e}^{\i kr}}{r}\label{ch2eq/4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc, il est nécessaire de développer l'onde plane en polynômes de 
+\shape smallcaps
+Legendre
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En effet, selon la solution de l'équation de 
+\shape smallcaps
+Schrödinger
+\shape default
+ quand 
+\begin_inset Formula $V(r)=0$
+\end_inset
+
+, on a trouvé :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{R}_{l}(r)={A}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Voir le livre 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+Quantum Mechanics
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+"
+\end_layout
+
+\end_inset
+
+ par 
+\shape smallcaps
+Albert Messiah
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${A}_{l}={i}^{l}(2l+1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{inc}(\vec{r})={\e}^{\i kz}=\sum_{l}{i}^{l}(2l+1)\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En autre, 
+\begin_inset Formula $f(\theta,\ \phi)$
+\end_inset
+
+ est aussi développé en polynômes de 
+\shape smallcaps
+Legendre
+\shape default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(\theta,\ \phi)=\sum_{l}{f}_{l}{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'équation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/4"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ devient:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\Psi}_{asy}(r,\ \theta,\ \phi)=\sum_{l}\left[{i}^{l}(2l+1)\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}+{f}_{l}\frac{{\e}^{\i kr}}{r}\right]{P}_{l}(\cos{\theta})\label{ch2eq/5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Développons le 
+\begin_inset Formula $\sin$
+\end_inset
+
+ dans l'équatiion 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ : 
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}{C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}\right)\cos{{\delta}_{l}}+\cos\left(kr-l\frac{\pi}{2}\right)\sin{{\delta}_{l}}}{kr}{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selon 
+\shape smallcaps
+Euler
+\shape default
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\cos\left(kr-l\frac{\pi}{2}\right) & ={\e}^{\i\left(kr-l\frac{\pi}{2}\right)}-\i\sin\left(kr-l\frac{\pi}{2}\right)\\
+ & ={\left({\e}^{-\i\frac{\pi}{2}}\right)}^{l}{\e}^{\i kr}-\i\sin\left(kr-l\frac{\pi}{2}\right)\\
+ & ={(-\i)}^{l}{\e}^{\i kr}-\i\sin\left(kr-l\frac{\pi}{2}\right)
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'où : 
+\begin_inset Formula 
+\[
+\begin{split}\sin\left(kr-l\frac{\pi}{2}+{\delta}_{l}\right) & =\sin\left(kr-l\frac{\pi}{2}\right)\cos{{\delta}_{l}}+\cos\left(kr-l\frac{\pi}{2}\right)\sin{{\delta}_{l}}\\
+ & =\sin\left(kr-l\frac{\pi}{2}\right)\cos{{\delta}_{l}}+{(-\i)}^{l}{\e}^{\i kr}\sin{{\delta}_{l}}-\i\sin\left(kr-l\frac{\pi}{2}\right)\sin{{\delta}_{l}}\\
+ & =\sin\left(kr-l\frac{\pi}{2}\right)\left(\cos{{\delta}_{l}}-\i\sin{{\delta}_{l}}\right)+{(-\i)}^{l}{\e}^{\i kr}\sin{{\delta}_{l}}\\
+ & =\sin\left(kr-l\frac{\pi}{2}\right){\e}^{-\i{\delta}_{l}}+{(-\i)}^{l}{\e}^{\i kr}\sin{{\delta}_{l}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce qui donne :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}{C}_{l}\left[{\e}^{-\i{\delta}_{l}}\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}+{(-\i)}^{l}\frac{\sin{{\delta}_{l}}}{k}\frac{{\e}^{\i kr}}{r}\right]{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sa comparaison avec l'équation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ donne :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}{C}_{l} & ={i}^{l}(2l+1){\e}^{\i{\delta}_{l}}\\
+{f}_{l} & ={(-\i)}^{l}{C}_{l}\frac{\sin{{\delta}_{l}}}{k}=(2l+1)\frac{\sin{{\delta}_{l}}}{k}{\e}^{\i{\delta}_{l}}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Par conséquent, l'amplitude de diffusion sera donnée par cette expression
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(\theta,\ \phi)=\frac{1}{k}\sum_{l}(2l+1)\sin{{\delta}_{l}}{\e}^{\i{\delta}_{l}}{P}_{l}(\cos{\theta})\label{ch2eq/6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Calcul de la section efficace
+\end_layout
+
+\begin_layout Standard
+On a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega} & ={\left\lvert {f}(\theta,\ \phi)\right\rvert }^{2}\\
+ & =\frac{1}{{k}^{2}}\sum_{l,m}(2l+1)(2m+1)\sin{{\delta}_{l}}\sin{{\delta}_{m}}{\e}^{\i\left({\delta}_{l}-{\delta}_{m}\right)}{P}_{l}(\cos{\theta}){P}_{m}(\cos{\theta})
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Et on intégrant sur l'angle solide, on obtient 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+On a utilié le fait que : 
+\begin_inset Formula 
+\[
+\int_{-1}^{1}\!\!\!{P}_{l}(\cos{\theta}){P}_{m}(\cos{\theta})\ \diff\cos{\theta}=\frac{2}{2l+1}{\delta}_{l,m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\begin{split}\sigma(\theta,\ \phi) & =\iint\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega}\sin{\theta}\ \diff\theta\ \diff\phi\\
+ & =\frac{1}{{k}^{2}}\sum_{l,m}(2l+1)(2m+1)\sin{{\delta}_{l}}\sin{{\delta}_{m}}{\e}^{\i\left({\delta}_{l}-{\delta}_{m}\right)}\int_{0}^{\pi}\!\!\!{P}_{l}(\cos{\theta}){P}_{m}(\cos{\theta})\sin{\theta}\ \diff\theta\int_{0}^{2\pi}\!\!\!\!\diff\phi\\
+ & =\frac{2\pi}{{k}^{2}}\sum_{l,m}(2l+1)(2m+1)\sin{{\delta}_{l}}\sin{{\delta}_{m}}{\e}^{\i\left({\delta}_{l}-{\delta}_{m}\right)}\int_{-1}^{1}\!\!\!{P}_{l}(\cos{\theta}){P}_{m}(\cos{\theta})\ \diff\cos{\theta}\\
+ & =\frac{4\pi}{{k}^{2}}\sum_{l}(2l+1)\sin^{2}{{\delta}_{l}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Le sens physique du déphasage
+\end_layout
+
+\begin_layout Standard
+Quel est le sense physique du déphasage 
+\begin_inset Formula ${\delta}_{l}$
+\end_inset
+
+? afin de répondre à cette question, on compare entre l'onde libre (plane)
+ et l'onde diffusée :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{inc}(r,\ \theta,\ \phi)=\sum_{l}{R}_{l}^{inc}(r){P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+et 
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}{R}_{l}^{dif}(r){P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{split}{R}_{l}^{inc}(r) & ={A}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}\right)}{kr}\\
+ & =\frac{{A}_{l}}{2\i kr}\left[{\e}^{\i\left(kr-l\frac{\pi}{2}\right)}-{\e}^{-\i\left(kr-l\frac{\pi}{2}\right)}\right]\\
+ & =\frac{{i}^{l}(2l+1)}{2\i kr}\left[{(-\i)}^{l}{\e}^{\i kr}-{\i}^{l}{\e}^{-\i kr}\right]\\
+ & =\frac{2l+1}{2\i kr}\left[{(-1)}^{l+1}\underbrace{{\e}^{-\i kr}}_{\text{onde entrante}}+\underbrace{{\e}^{\i kr}}_{\text{onde sortante}}\right]
+\end{split}
+\label{ch2eq/7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{remark}
+\end_layout
+
+\end_inset
+
+ Ici, il est important de ne pas interpréter l'onde sortante comme une onde
+ diffusée, car il n'y a pas de diffusion dans 
+\begin_inset Formula ${\Psi}_{inc}(\vec{r})$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{remark}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{split}{R}_{l}^{dif}(r) & ={C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}+{\delta}_{l}\right)}{kr}\\
+ & ={C}_{l}\frac{\sin\left(kr-l\frac{\pi}{2}\right){\e}^{-\i{\delta}_{l}}+{(-\i)}^{l}{\e}^{\i kr}\sin{{\delta}_{l}}}{kr}\\
+ & ={C}_{l}\frac{\left[{\e}^{\i\left(kr-l\frac{\pi}{2}\right)}-{\e}^{-\i\left(kr-l\frac{\pi}{2}\right)}\right]{\e}^{-\i{\delta}_{l}}+{(-\i)}^{l}{\e}^{\i kr}\left[{\e}^{\i{\delta}_{l}}-{\e}^{-\i{\delta}_{l}}\vphantom{{\e}^{\i\left(kr-l\frac{\pi}{2}\right)}}\right]}{2\i kr}\\
+ & =\frac{{i}^{l}(2l+1){\e}^{\i{\delta}_{l}}}{2\i kr}\Bigg\{\!\!\!\left[{(-\i)}^{l}{\e}^{\i kr}-{\i}^{l}{\e}^{-\i kr}\right]{\e}^{-\i{\delta}_{l}}+{(-\i)}^{l}{\e}^{\i kr}\left[{\e}^{\i{\delta}_{l}}-{\e}^{-\i{\delta}_{l}}\vphantom{{(-\i)}^{l}{\e}^{\i kr}}\right]\!\!\!\Bigg\}\\
+ & =\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}\underbrace{{\e}^{-\i kr}}_{\text{onde entrante}}+\ {\e}^{2\i{\delta}_{l}}\underbrace{{\e}^{\i kr}}_{\text{onde sortante}}\right]
+\end{split}
+\label{ch2eq/8}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La comparaison entre 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ et 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/8"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ montre que l'onde entrante reste la même, tandis que l'onde sortante change
+ de comportement.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc, le rôle de 
+\begin_inset Formula $V(r)$
+\end_inset
+
+ est d'introduire un déphasage dans l'onde sortante.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a alors : 
+\begin_inset Formula 
+\begin{align*}
+\begin{split}{\Psi}_{dif}(r,\ \theta,\ \phi) & =\sum_{l}\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}{\e}^{-\i kr}+{\e}^{2\i{\delta}_{l}}{\e}^{\i kr}\right]{P}_{l}(\cos{\theta})\\
+{\Psi}_{asy}(r,\ \theta,\ \phi) & =\sum_{l}\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}{\e}^{-\i kr}+{\e}^{\i kr}\right]{P}_{l}(\cos{\theta})
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sous l'effet du potentiel, si on pose 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula ${S}_{l}(k)$
+\end_inset
+
+ est appelé l'élément de la matrice 
+\begin_inset Formula $\mathbb{S}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula ${S}_{l}(k)={\e}^{2\i{\delta}_{l}(k)}$
+\end_inset
+
+, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{dif}(r,\ \theta,\ \phi)=\sum_{l}\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}{\e}^{-\i kr}+{S}_{l}(k){\e}^{\i kr}\right]{P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Equivalement, on peut écrire : 
+\begin_inset Formula 
+\[
+\begin{split}{\Psi}_{dif}(r,\ \theta,\ \phi) & ={\e}^{\i kz}-{\e}^{\i kz}+\sum_{l}\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}{\e}^{-\i kr}+{S}_{l}(k){\e}^{\i kr}\right]{P}_{l}(\cos{\theta})\\
+ & ={\e}^{\i kz}-{\Psi}_{asy}(r,\ \theta,\ \phi)+\sum_{l}\frac{(2l+1)}{2\i kr}\left[{(-1)}^{l+1}{\e}^{-\i kr}+{S}_{l}(k){\e}^{\i kr}\right]{P}_{l}(\cos{\theta})\\
+ & ={\e}^{\i kz}+\sum_{l}\frac{(2l+1)}{2\i k}\left({S}_{l}(k)-1\right){P}_{l}(\cos{\theta})\frac{{\e}^{\i kr}}{r}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce qui induit : 
+\begin_inset Formula 
+\[
+f(\theta,\ \phi)=\frac{1}{2\i k}\sum_{l}(2l+1)\left({S}_{l}(k)-1\right){P}_{l}(\cos{\theta})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+qui est équivalent à 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "ch2eq/6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $\theta=0\implies{P}_{l}(\cos{\theta})={P}_{l}(1)=1$
+\end_inset
+
+, on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(0,\ \phi)=\frac{1}{k}\sum_{l}(2l+1)\sin{{\delta}_{l}}{\e}^{\i{\delta}_{l}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma(0,\ \phi)=\frac{4\pi}{{k}^{2}}\sum_{l}(2l+1)\sin^{2}{{\delta}_{l}}=\frac{4\pi}{k}\Im f(0,\ \phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce résultat est connu par le 
+\series bold
+théorème optique
+\series default
+.
+\end_layout
+
+\begin_layout Chapter
+Fonction de 
+\shape smallcaps
+Green
+\shape default
+ - Approximation de 
+\shape smallcaps
+Born
+\end_layout
+
+\begin_layout Section
+Équation intégrale de diffusion
+\end_layout
+
+\begin_layout Standard
+Pour des commodités de calcul, nous allons adopter dans ce qui va suivre,
+ les notations de l'algèbre de 
+\shape smallcaps
+Dirac
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Soit la diffusion élastique d'une particule de masse 
+\begin_inset Formula $m$
+\end_inset
+
+ par un potentiel 
+\begin_inset Formula $\mathrm{{V}}(\vec{{r}})$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Soient 
+\begin_inset Formula ${\opr{H}}_{0}$
+\end_inset
+
+ l'Hamiltonien de la particule incident et 
+\begin_inset Formula $\ket{{\vec{k}}_{0}}$
+\end_inset
+
+ les kets propres de 
+\begin_inset Formula ${\opr{H}}_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{0}\ket{{\vec{k}}_{0}}={E}_{0}\ket{{\vec{k}}_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ket{{\vec{k}}_{0}}$
+\end_inset
+
+ représente l'onde plane incidente ou les particules transmissent sans diffusion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{H}={\opr{H}}_{0}+\opr{V}\implies\opr{V}=\opr{H}-{\opr{H}}_{0}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Après diffusion :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{H}\ket{{\Psi}_{{\vec{k}}_{f}}}=E\ket{{\Psi}_{{\vec{k}}_{f}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}}$
+\end_inset
+
+ est associé à la fonction d'onde diffusée qui a le comportement asymptotique
+ suivant :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ket{{\Psi}_{{\vec{k}}_{f}}}=\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}}}+\ket{\chi\vphantom{{\Psi}_{{\vec{k}}_{f}}}}\label{chap3_eq/3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+où 
+\begin_inset Formula $\ket{\chi}$
+\end_inset
+
+ représente la partie purement diffusée.
+ On a une diffusion élastique, alors 
+\begin_inset Formula $E={E}_{0}$
+\end_inset
+
+ et donc 
+\begin_inset Formula $\ket{{\vec{k}}_{f}}=\ket{{\vec{k}}_{0}},\ \left\lVert {\vec{k}}_{f}\right\rVert =\left\lVert {\vec{k}}_{0}\right\rVert $
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+L'action de 
+\begin_inset Formula $\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}} & =\left(\opr{H}-{\opr{H}}_{0}\right)\ket{{\Psi}_{{\vec{k}}_{f}}}\\
+ & =\left(E-{\opr{H}}_{0}\right)\ket{{\Psi}_{{\vec{k}}_{f}}}\\
+ & =\left({E}_{0}-{\opr{H}}_{0}\right)\left(\ket{{\vec{k}}_{0}}+\ket{\chi\vphantom{{\vec{k}}_{0}}}\right)\\
+ & =\left({E}_{0}-{\opr{H}}_{0}\right)\ket{{\vec{k}}_{0}}+\left(E-{\opr{H}}_{0}\right)\ket{\chi\vphantom{{\vec{k}}_{0}}}\\
+ & =\left({E}_{0}-{\opr{H}}_{0}\right)\ket{\chi\vphantom{{\vec{k}}_{0}}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C'est une équation différentielle du second ordre.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si l'on suppose que 
+\begin_inset Formula $\left({E}_{0}-{\opr{H}}_{0}\right)$
+\end_inset
+
+ est inversible, on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\ket{\chi\vphantom{{\Psi}_{{\vec{k}}_{f}}}}=\frac{1}{{E}_{0}-{\opr{H}}_{0}}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}}\label{chap3_eq/5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et on appelle opérateur de 
+\shape smallcaps
+Green
+\shape default
+ le rapport :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{G}_{0}({E}_{0})=\frac{1}{{E}_{0}-{\opr{H}}_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec 
+\begin_inset Formula ${E}_{0}>0$
+\end_inset
+
+ : la particule incidente avec une énergie cinétique positive et elle est
+ libre.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donc l'équation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ s'écrit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{\chi\vphantom{{\Psi}_{{\vec{k}}_{f}}}}=\opr{G}_{0}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et en remplaçant dans l'équation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{{\Psi}_{{\vec{k}}_{f}}}=\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}}}+\opr{G}_{0}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+C'est l'équation intégrale de diffusion en notation de 
+\shape smallcaps
+Dirac
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multiplions cette expression par le bra 
+\begin_inset Formula $\bra{\vec{r}}$
+\end_inset
+
+ (projection dans l'espace des vecteurs positions).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\bra{\vec{r}}\ket{{\Psi}_{{\vec{k}}_{f}}} & =\bra{\vec{r}}\ket{{\vec{k}}_{0}}+\bra{\vec{r}\vphantom{{\Psi}_{{\vec{k}}_{f}}}}\opr{G}_{0}({E}_{0})\opr{\identity}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}}\\
+ & =\bra{\vec{r}}\ket{{\vec{k}}_{0}}+\iint\bra{\vec{r}\vphantom{\pvec{r}'}}\opr{G}_{0}({E}_{0})\ket{\pvec{r}'}\bra{\pvec{r}'}\opr{V}\ket{\pvec{r}''}\bra{\pvec{r}''}\ket{{\Psi}_{{\vec{k}}_{f}}}\ {\diff}^{3}r'\,{\diff}^{3}r''
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On sait que :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\bra{\vec{r}}\ket{{\Psi}_{{\vec{k}}_{f}}} & ={\Psi}_{{\vec{k}}_{f}}(\vec{r})\\
+\bra{\vec{r}}\ket{{\vec{k}}_{0}} & =\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On notera :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\bra{\vec{r}\vphantom{\pvec{r}'}}\opr{G}_{0}({E}_{0})\ket{\pvec{r}'} & ={G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0})\\
+\bra{\pvec{r}'}\opr{V}\ket{\pvec{r}''} & =V(\pvec{r}',\ \pvec{r}'')
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a alors :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\Psi}_{{\vec{k}}_{f}}(\vec{r})=\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}+\iint{G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0})V(\pvec{r}',\ \pvec{r}''){\Psi}_{{\vec{k}}_{f}}(\pvec{r}'')\ {\diff}^{3}r'\,{\diff}^{3}r''\label{chap3_eq/11}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+0.5em
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula ${\opr{V}}^{\dagger}=\opr{V}$
+\end_inset
+
+ potentiel réel 
+\begin_inset Formula $\implies\bra{\pvec{r}'}\opr{V}\ket{\pvec{r}''}=\bra{\pvec{r}''}\opr{V}\ket{\pvec{r}'}$
+\end_inset
+
+, 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $V(\pvec{r}',\ \pvec{r}'')=V(\pvec{r}'',\ \vec{r'})$
+\end_inset
+
+ potentiel symétrique en 
+\begin_inset Formula $\pvec{r}'$
+\end_inset
+
+ et 
+\begin_inset Formula $\pvec{r}''$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Potentiel séparable : 
+\begin_inset Formula $V(\pvec{r}',\ \pvec{r}'')=v(\pvec{r}')v(\pvec{r}'')$
+\end_inset
+
+ (la même fonction car 
+\begin_inset Formula $V$
+\end_inset
+
+ est symétrique).
+\end_layout
+
+\begin_layout Itemize
+Un potentiel local est defini par : 
+\begin_inset Formula $V(\pvec{r}',\ \pvec{r}'')=V(\pvec{r}')\delta(\pvec{r}'-\pvec{r}'')$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Fonction de 
+\shape smallcaps
+Green
+\end_layout
+
+\begin_layout Standard
+On appelle fonction de 
+\shape smallcaps
+Green
+\shape default
+ de diffusion 
+\begin_inset Formula ${G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0})$
+\end_inset
+
+ l'élement de la matrice 
+\begin_inset Formula $\bra{\vec{r}}\opr{G}_{0}({E}_{0})\ket{\pvec{r}'}$
+\end_inset
+
+ de l'opérateur de 
+\shape smallcaps
+Green
+\shape default
+ 
+\begin_inset Formula $\opr{G}_{0}({E}_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Calcul de 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula ${G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0})$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+G
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{G}_{0}({E}_{0})=\frac{1\times\opr{\identity}}{{E}_{0}-{\opr{H}}_{0}},\qquad\opr{\identity}=\bigint{}{}\ket{\vec{k}}\bra{\vec{k}}\ {\diff}^{3}k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Où 
+\begin_inset Formula $\ket{\vec{k}}$
+\end_inset
+
+ est un ket propre de 
+\begin_inset Formula ${\opr{H}}_{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\opr{H}}_{0}\ket{\vec{k}}=E\ket{\vec{k}}=\frac{{\hbar}^{2}{k}^{2}}{2m}\ket{\vec{k}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{G}_{0}({E}_{0})=\Bigint{}{}\frac{\ket{\vec{k}}\bra{\vec{k}}}{{E}_{0}-{E}_{k}}\ {\diff}^{3}k=\frac{2m}{{\hbar}^{2}}\Bigint{}{}\frac{\ket{\vec{k}}\bra{\vec{k}}}{{k}_{0}^{2}-{k}^{2}}\ {\diff}^{3}k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0}) & =\frac{2m}{{\hbar}^{2}}\Bigint{}{}\frac{\bra{\vec{r}}\ket{\vec{k}}\bra{\vec{k}}\ket{\pvec{r}'}}{{k}_{0}^{2}-{k}^{2}}\ {\diff}^{3}k\\
+ & =\frac{2m}{{\hbar}^{2}}\frac{1}{{(2\pi)}^{3}}\Bigint{}{}\frac{{\e}^{\i\vec{k}\cdot\vec{r}}\,{\e}^{-\i\vec{k}\cdot\pvec{r}'}}{{k}_{0}^{2}-{k}^{2}}\ {\diff}^{3}k\\
+ & =\frac{2m}{{\hbar}^{2}}\frac{1}{{(2\pi)}^{3}}\Bigint{}{}\frac{{\e}^{\i\vec{k}\cdot\left(\vec{r}-\pvec{r}'\right)}}{{k}_{0}^{2}-{k}^{2}}\ {\diff}^{3}k
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On montre que 
+\begin_inset Formula ${G}_{0}(\vec{r},\ \pvec{r}';\ {E}_{0})={G}_{0}(\vec{r}-\pvec{r}';\ {E}_{0})$
+\end_inset
+
+ n'est qu'une fonction de 
+\begin_inset Formula $\vec{r}-\pvec{r}'$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On pose 
+\begin_inset Formula $\vec{\rho}=\vec{r}-\pvec{r}'$
+\end_inset
+
+ et choisissons 
+\begin_inset Formula $\vec{\rho}$
+\end_inset
+
+ le long de l'axe 
+\begin_inset Formula $oz$
+\end_inset
+
+ et on utilise les coordonnées sphériques :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_z) at (3, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_rho) at (1, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_k) at (2, 1.5);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (origin) {$o$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_z);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_z) {$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_rho);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_rho) {$
+\backslash
+vec{
+\backslash
+rho}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_k);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_k) {$
+\backslash
+vec{k}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+pic[draw, ->, "$
+\backslash
+theta$", angle eccentricity = 1.5] {angle = vec_rho--origin--vec_k};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\vec{k}\cdot\left(\vec{r}-\pvec{r}'\right) & =\vec{k}\cdot\vec{\rho}=k\rho\cos{\theta}\\
+{\diff}^{3}k & ={k}^{2}\sin{\theta}\ \diff k\,\diff\theta\,\diff\phi
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{G}_{0}(\rho;\ {E}_{0})=\frac{2m}{{\hbar}^{2}}\frac{1}{{(2\pi)}^{3}}\Bigint{0}{\infty}\removeintspace\ \frac{{k}^{2}}{{k}_{0}^{2}-{k}^{2}}\ \diff k\ \Bigint{0}{2\pi}\removeintspace\diff\phi\ \Bigint{0}{\pi}\removeintspace{\e}^{\i k\rho\cos{\theta}}\sin{\theta}\ \diff\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posons 
+\begin_inset Formula $u=\cos{\theta},\ du=-\sin{\theta}\ \diff\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\Bigint{0}{\pi}\removeintspace{\e}^{\i k\rho\cos{\theta}}\sin{\theta}\ \diff\theta & =\int_{-1}^{1}{\e}^{\i k\rho u}\ \diff u\\
+ & =\frac{1}{\i k\rho}\left[{\e}^{\i k\rho u}\right]_{-1}^{+1}\\
+ & =\frac{1}{\i k\rho}\left[{\e}^{\i k\rho}-{\e}^{-\i k\rho}\right]\\
+ & =\frac{2}{k\rho}\left[\frac{{\e}^{\i k\rho}-{\e}^{-\i k\rho}}{2\i}\right]
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Bigint{0}{\pi}\removeintspace{\e}^{\i k\rho\cos{\theta}}\sin{\theta}\ \diff\theta=2\frac{\sin{k\rho}}{k\rho}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a alors :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{G}_{0}(\rho;\ {E}_{0}) & =\frac{2m}{{\hbar}^{2}}\frac{1}{{(2\pi)}^{3}}\frac{4\pi}{\rho}\Bigint{0}{\infty}\removeintspace\ \underbrace{\frac{k\sin{k\rho}}{{k}_{0}^{2}-{k}^{2}}}_{\text{pair}}\ \diff k\\
+ & =\frac{2m}{{\hbar}^{2}}\frac{1}{{(2\pi)}^{3}}\frac{4\pi}{\rho}\frac{1}{2}\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k\sin{k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k\\
+ & =\frac{m}{2\rho{\pi}^{2}{\hbar}^{2}}\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k\sin{k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k\\
+ & =\frac{m}{2\rho{\pi}^{2}{\hbar}^{2}}\ \Im\!\!\!\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k{\e}^{\i k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${\e}^{\i k\rho}=\cos{k\rho}+\i\sin{k\rho}$
+\end_inset
+
+, or 
+\begin_inset Formula $\Re\!\!\!\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k{\e}^{\i k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k=\!\!\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k\cos{k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k=0$
+\end_inset
+
+ alors :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Im\!\!\!\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k{\e}^{\i k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k=\frac{1}{\i}\Bigint{-\infty}{+\infty}\removeintspace\ \frac{k{\e}^{\i k\rho}}{{k}_{0}^{2}-{k}^{2}}\ \diff k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{k}{{k}_{0}^{2}-{k}^{2}}=-\frac{k}{\left(k-{k}_{0}\right)\left(k+{k}_{0}\right)}=-\frac{1}{2}\left(\frac{1}{k-{k}_{0}}+\frac{1}{k+{k}_{0}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On trouve : 
+\begin_inset Formula 
+\[
+{G}_{0}(\rho;\ {E}_{0})=-\frac{m}{4\rho{\pi}^{2}{\hbar}^{2}\i}\left[\underbrace{\Bigint{-\infty}{+\infty}\removeintspace\ \frac{{\e}^{\i k\rho}}{k-{k}_{0}}\ \diff k}_{\mathbf{I_{1}}}+\underbrace{\Bigint{-\infty}{+\infty}\removeintspace\ \frac{{\e}^{\i k\rho}}{k+{k}_{0}}\ \diff k}_{\mathbf{I_{2}}}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour calculer les intégrales 
+\begin_inset Formula $\mathbf{I_{1}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\mathbf{I_{2}}$
+\end_inset
+
+, on utilisons le théorème des résidus 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Si 
+\begin_inset Formula $f(z)=\frac{P(z)}{Q(z)}$
+\end_inset
+
+, alors : 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{+\infty}f(z){\e}^{\i z}\ \diff z=2\pi\i{\sum}_{\alpha}\res(f,\ {z}_{\alpha}){\e}^{\i{z}_{\alpha}},\qquad{z}_{\alpha}\ \text{sont les racines de}\ Q(z)\ \text{et}\ \res(f,\ {z}_{\alpha})=\frac{P({z}_{\alpha})}{Q'({z}_{\alpha})}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+, on trouve :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\mathbf{I_{1}} & =2\pi\i{\e}^{\i{k}_{0}\rho}\\
+\mathbf{I_{2}} & =2\pi\i{\e}^{-\i{k}_{0}\rho}
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{G}_{0}(\rho;\ {E}_{0}) & =-\frac{m}{4\rho{\pi}^{2}{\hbar}^{2}\i}2\pi\i\left({\e}^{\i{k}_{0}\rho}+{\e}^{-\i{k}_{0}\rho}\right)\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}\frac{1}{\rho}\left(\underbrace{{\e}^{\i{k}_{0}\rho}}_{\text{onde sortante}}+\underbrace{{\e}^{-\i{k}_{0}\rho}}_{\text{onde rentrante}}\right)
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'où on définit :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{G}_{0}^{\pm}(\rho;\ {E}_{0})=-\frac{m}{2\pi{\hbar}^{2}}\frac{1}{\rho}{\e}^{\pm\i{k}_{0}\rho}\label{chap3_eq/14}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En remplaçant 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/14"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ dans 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/11"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{{\vec{k}}_{f}}^{\pm}(\vec{r})=\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}-\frac{m}{2\pi{\hbar}^{2}}\iint\frac{{\e}^{\pm\i{k}_{0}\rho}}{\rho}V(\pvec{r}',\ \pvec{r}''){\Psi}_{{\vec{k}}_{f}}^{\pm}(\pvec{r}'')\ {\diff}^{3}r'\,{\diff}^{3}r''
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\rho=\left\lVert \vec{r}-\pvec{r}'\right\rVert $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Si 
+\begin_inset Formula $V$
+\end_inset
+
+ est local : 
+\begin_inset Formula $V(\pvec{r}',\ \pvec{r}'')=V(\pvec{r}')\delta(\pvec{r}'-\pvec{r}'')$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans ces conditions on a :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+{\Psi}_{{\vec{k}}_{f}}^{\pm}(\vec{r})=\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}-\frac{m}{2\pi{\hbar}^{2}}\int\frac{{\e}^{\pm\i{k}_{0}\left\lVert \vec{r}-\pvec{r}'\right\rVert }}{\left\lVert \vec{r}-\pvec{r}'\right\rVert }V(\pvec{r}'){\Psi}_{{\vec{k}}_{f}}^{\pm}(\pvec{r}')\ {\diff}^{3}r'\label{chap3_eq/15}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Amplitude de diffusion - Section efficace
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $r$
+\end_inset
+
+ grand, 
+\begin_inset Formula $r'$
+\end_inset
+
+ petit (si 
+\begin_inset Formula $r'$
+\end_inset
+
+ est grand 
+\begin_inset Formula $\implies V(\pvec{r}')=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_r) at (1.5, 3);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_r') at (1.5, 0.1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_r);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_r) {$
+\backslash
+vec{r}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_r');
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (vec_r') {$
+\backslash
+pvec{r}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, thick, ->, loosely dotted](vec_r') -- (vec_r);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at ($(vec_r')!0.5!(vec_r)$) {$
+\backslash
+vec{r} - 
+\backslash
+pvec{r}'$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, thick, loosely dotted]($(origin) + (0.5, 0)$) ellipse (2.5cm and
+ 1.2cm);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center] at ($(origin) + (0, -2.0)$) {Zone d'action du potentiel};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\left\lVert \vec{r}-\pvec{r}'\right\rVert  & =\sqrt{{r}^{2}-2\vec{r}\cdot\pvec{r}'+{r'}^{2}}\\
+ & =r\sqrt{1+{\left(\frac{r'}{r}\right)}^{2}-2\frac{\vec{r}\cdot\pvec{r}'}{{r}^{2}}}\\
+ & \approx r\sqrt{1-2\frac{\vec{r}\cdot\pvec{r}'}{{r}^{2}}}\\
+ & \approx r\left(1-\frac{\vec{r}\cdot\pvec{r}'}{{r}^{2}}\right)
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{\vec{r}}{r}={\vec{u}}_{r}$
+\end_inset
+
+ : vecteur unitaire de la particule diffusée.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\left\lVert {\vec{k}}_{f}\right\rVert =\left\lVert {\vec{k}}_{0}\right\rVert $
+\end_inset
+
+ : diffusion élastique.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'où :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{k}_{0}\left\lVert \vec{r}-\pvec{r}'\right\rVert ={k}_{0}r-{k}_{0}\,{\vec{u}}_{r}\cdot\pvec{r}'={k}_{0}r-{k}_{f}\,{\vec{u}}_{r}\cdot\pvec{r}'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En remplaçant ceci dans l'équation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/15"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, on obtient :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{{\vec{k}}_{f}}^{\pm}(\vec{r})=\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}-\frac{m}{2\pi{\hbar}^{2}}\frac{{\e}^{\pm\i{k}_{0}r}}{r}\int{\e}^{\mp\i{k}_{f}\,{\vec{u}}_{r}\cdot\pvec{r}'}V(\pvec{r}'){\Psi}_{{\vec{k}}_{f}}^{\pm}(\pvec{r}')\ {\diff}^{3}r'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans ce problème, on ne s'intéresse qu'à l'onde divergente (l'onde sortante
+ 
+\begin_inset Formula ${\Psi}_{{\vec{k}}_{f}}^{+}(\vec{r})$
+\end_inset
+
+) (Pour qu'il y ait effectivement diffusion).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{\Psi}_{{\vec{k}}_{f}}^{+}(\vec{r})=\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}-\frac{m}{2\pi{\hbar}^{2}}\frac{{\e}^{\i{k}_{0}r}}{r}\int{\e}^{-\i{k}_{f}\,{\vec{u}}_{r}\cdot\pvec{r}'}V(\pvec{r}'){\Psi}_{{\vec{k}}_{f}}^{+}(\pvec{r}')\ {\diff}^{3}r'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En comparant cette expression à l'expression asymptotique de 
+\begin_inset Formula ${\Psi}_{{\vec{k}}_{f}}(\vec{r})$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{r\to\infty}{\Psi}_{{\vec{k}}_{f}}(\vec{r})\sim\frac{{\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}+\frac{{f}_{{\vec{k}}_{f}}(\theta,\ \phi)}{(2\pi)^{\frac{3}{2}}}\frac{{\e}^{\i{k}_{f}r}}{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On obtient l'amplitude de diffusion :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{\frac{3}{2}}\int{\e}^{-\i{k}_{f}\,{\vec{u}}_{r}\cdot\pvec{r}'}V(\pvec{r}'){\Psi}_{{\vec{k}}_{f}}^{+}(\pvec{r}')\ {\diff}^{3}r'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+aussi, les solutions 
+\begin_inset Formula ${\Psi}_{{\vec{k}}_{f}}^{+}(\pvec{r})$
+\end_inset
+
+ de l'équation intégrale de diffusion sont bien des états stationnaires
+ de diffusion.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula ${f}_{{\vec{k}}_{f}}(\theta,\ \phi)$
+\end_inset
+
+ peut aussi s'écrire en notation de 
+\shape smallcaps
+Dirac
+\shape default
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\bra{{\vec{k}}_{f}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+et on a la section efficace différentielle :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega}={\left\lvert {f}_{{\vec{k}}_{f}}(\theta,\ \phi)\right\rvert }^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Approximation de 
+\shape smallcaps
+Born
+\end_layout
+
+\begin_layout Standard
+On a déjà vu que :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}=\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On reécrit 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ en utilisant sa propre équation :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{split}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}} & =\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\left(\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}\right)\\
+ & =\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}\\
+ & =\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\cdots
+\end{split}
+\label{chap3_eq/19}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La méthode consiste à remplacer dans le second membre l'équation intégrale
+ 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ par son expression initiale, et on répétera cette opération, chaque fois
+ que 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ apparaitra.
+ On obtient une série infinie (appelée série de 
+\shape smallcaps
+Born
+\shape default
+).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De même, on aura pour l'amplitude de diffusion :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{f}_{{\vec{k}}_{f}}(\theta,\ \phi) & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\bra{{\vec{k}}_{f}}\opr{V}\left(\ket{{\vec{k}}_{0}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}}+\cdots\right)\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\left(\bra{{\vec{k}}_{f}}\opr{V}\ket{{\vec{k}}_{0}}+\bra{{\vec{k}}_{f}}\opr{V}{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\vec{k}}_{0}}+\cdots\right)
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans l'approximation de 
+\shape smallcaps
+Born
+\shape default
+, on remplace 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ par 
+\begin_inset Formula $\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi) & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\bra{{\vec{k}}_{f}}\opr{V}\ket{{\vec{k}}_{0}}\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\bra{{\vec{k}}_{f}}\opr{\identity}\times\opr{V}\times\opr{\identity}\ket{{\vec{k}}_{0}}\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\iint\bra{{\vec{k}}_{f}}\ket{\vec{r}\vphantom{{\vec{k}}_{f}}}\bra{\vec{r}\vphantom{\pvec{r}'}}\opr{V}\ket{\pvec{r}'}\bra{\pvec{r}'\vphantom{{\vec{k}}_{0}}}\ket{{\vec{k}}_{0}}\ {\diff}^{3}r\,{\diff}^{3}r'\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}(2\pi)^{3}\iint\frac{{\e}^{-\i{\vec{k}}_{f}\cdot\vec{r}}}{(2\pi)^{\frac{3}{2}}}\frac{{\e}^{\i{\vec{k}}_{0}\cdot\pvec{r}'}}{(2\pi)^{\frac{3}{2}}}V(\vec{r},\ \pvec{r}')\ {\diff}^{3}r\,{\diff}^{3}r'
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $V$
+\end_inset
+
+ local 
+\begin_inset Formula $V(\vec{r},\ \pvec{r}')=V(\vec{r})\delta(\vec{r}-\pvec{r}')$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}\int{\e}^{-\i\left({\vec{k}}_{f}-{\vec{k}}_{0}\right)\cdot\vec{r}}V(\vec{r})\ {\diff}^{3}r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On pose 
+\begin_inset Formula ${\vec{k}}_{f}-{\vec{k}}_{0}=\vec{q}$
+\end_inset
+
+ : impulsion de transfer
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}\int{\e}^{-\i\vec{q}\cdot\vec{r}}V(\vec{r})\ {\diff}^{3}r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On peut donner une interprétation physique de la relation 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ qui souligne bien l'analogie entre la mécanique quantique et l'optique
+ ondulatoire.
+ En effet, si l'on considère la zone d'action du potentiel comme un milieu
+ diffuseur, on constate que l'onde totale au point 
+\begin_inset Formula $\vec{r}$
+\end_inset
+
+ donnée par la formule 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap3_eq/19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ correspond à la superposition d'une onde incidente avec une infinité d'ondes
+ provenant de sources secondaires induites dans le milieu diffuseur par
+ l'onde incidente.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{remark}
+\end_layout
+
+\end_inset
+
+ L'approximation de 
+\shape smallcaps
+Born
+\shape default
+ est valable quand le potentiel diffuseur est faible devant l'énergie cinétique
+ de la particule.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{remark}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diffusion par un potentiel central
+\end_layout
+
+\begin_layout Standard
+On a 
+\begin_inset Formula $V(\vec{r})=V(r,\theta,\phi)=V(\left\lVert \vec{r}\right\rVert )=V(r)$
+\end_inset
+
+ car on a une symmétrie sphérique.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On choisit 
+\begin_inset Formula $\vec{q}$
+\end_inset
+
+ le long de l'axe 
+\begin_inset Formula $oz$
+\end_inset
+
+ et on utilise les coordonnées sphériques :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_z) at (0, 3);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_q) at (0, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+coordinate (vec_r) at (2, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north east] at (origin) {$o$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_z);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_z) {$z$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_q);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = south east] at (vec_q) {$
+\backslash
+vec{q}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_r);
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+node[align = center, anchor = north west] at (vec_r) {$
+\backslash
+vec{r}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\end_layout
+
+\begin_layout Plain Layout
+
+            
+\backslash
+pic[draw, ->, "$
+\backslash
+theta$", angle eccentricity = 1.5] {angle = vec_r--origin--vec_q};
+\end_layout
+
+\begin_layout Plain Layout
+
+        
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\begin{split}\vec{q}\cdot\vec{r} & =qr\cos{\theta}\\
+{\diff}^{3}r & ={r}^{2}\sin{\theta}\ \diff r\,\diff\theta\,\diff\phi
+\end{split}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}\int_{0}^{\infty}V(r){r}^{2}\diff r\int_{0}^{2\pi}\diff\phi\int_{0}^{\pi}{\e}^{-\i qr\cos{\theta}}\sin{\theta}\diff\theta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+avec :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\int_{0}^{2\pi}\diff\phi=2\pi,\qquad\int_{0}^{\pi}{\e}^{-\i qr\cos{\theta}}\sin{\theta}\diff\theta=2\frac{\sin{qr}}{qr}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'où :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{2m}{{\hbar}^{2}}\frac{1}{q}\int_{0}^{\infty}V(r)r\sin{qr}\ \diff r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{application}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+leavevmode
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+itemsep
+\end_layout
+
+\end_inset
+
+2em
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Potentiel de 
+\shape smallcaps
+Yukawa
+\shape default
+ : 
+\begin_inset Formula $\qquad V(r)={V}_{0}\frac{{\e}^{-\alpha r}}{r}\quad(\alpha>0)$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\begin{split}{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi) & =-\frac{2m}{{\hbar}^{2}}\frac{{V}_{0}}{q}\int_{0}^{\infty}{\e}^{-\alpha r}\sin{qr}\ \diff r\\
+ & =-\frac{2m}{{\hbar}^{2}}\frac{{V}_{0}}{q}\Im\int_{0}^{\infty}{\e}^{(-\alpha+\i q)r}\ \diff r\\
+ & =-\frac{2m}{{\hbar}^{2}}\frac{{V}_{0}}{{\alpha}^{2}+{q}^{2}}
+\end{split}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Diffusion élastique :
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+coordinate (origin) at (0, 0);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+coordinate (vec_k0) at (1, 1);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+coordinate (vec_kf) at (1, -1);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_k0);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+node[align = center, anchor = south east] at (vec_k0) {${
+\backslash
+vec{k}}_{0}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, very thick, ->](0, 0) -- (vec_kf);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+node[align = center, anchor = north east] at (vec_kf) {${
+\backslash
+vec{k}}_{f}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+draw[black, thick, ->, loosely dotted](vec_k0) -- (vec_kf);
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+node[align = center, anchor = west] at ($(vec_kf)!0.5!(vec_k0)$) {$
+\backslash
+vec{q}$};
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\end_layout
+
+\begin_layout Plain Layout
+
+                    
+\backslash
+pic[draw, ->, "$
+\backslash
+theta$", angle eccentricity = 1.5] {angle = vec_kf--origin--vec_k0};
+\end_layout
+
+\begin_layout Plain Layout
+
+                
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\lVert {\vec{k}}_{f}\right\rVert =\left\lVert {\vec{k}}_{0}\right\rVert \implies q=2{k}_{0}\sin{\frac{\theta}{2}}\quad\left(\theta\ \text{est l'angle de diffusion}\right)
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{2m}{{\hbar}^{2}}\frac{{V}_{0}}{{\alpha}^{2}+4{k}_{0}^{2}\sin^{2}\frac{\theta}{2}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+item 
+\end_layout
+
+\end_inset
+
+Diffusion Coulombienne : 
+\begin_inset Formula $\qquad V(r)=-\frac{Z{e}^{2}}{r}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+ (Potentiel de 
+\shape smallcaps
+Yukawa
+\shape default
+ pour 
+\begin_inset Formula $\alpha=0$
+\end_inset
+
+ et 
+\begin_inset Formula ${V}_{0}=-Z{e}^{2}$
+\end_inset
+
+)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=\frac{2m}{{\hbar}^{2}}\frac{Z{e}^{2}}{4{k}_{0}^{2}\sin^{2}\frac{\theta}{2}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+on pose 
+\begin_inset Formula ${k}_{0}^{2}=\frac{2m{E}_{0}}{{\hbar}^{2}}$
+\end_inset
+
+ :
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=\frac{Z{e}^{2}}{4{E}_{0}\sin^{2}\frac{\theta}{2}},\qquad\frac{\diff\sigma(\theta,\ \phi)}{\diff\Omega}=\frac{{Z}^{2}{e}^{4}}{16{E}_{0}^{4}\sin^{4}\frac{\theta}{2}}
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+C'est la formule de 
+\shape smallcaps
+Rutherford
+\shape default
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{itemize}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{application}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Équation de 
+\shape smallcaps
+Lippmann-Schwinger
+\end_layout
+
+\begin_layout Standard
+On a déjà trouvé l'équation intégrale :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}=\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}({E}_{0})\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}},\qquad{\opr{G}}_{0}^{+}({E}_{0})=\frac{1}{{E}_{0}-{\opr{H}}_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Afin d'éviter les problèmes de singularité, on prend :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{\opr{G}}_{0}^{+}(E) & =\frac{1}{{E}_{0}-{\opr{H}}_{0}+\i\varepsilon},\qquad\varepsilon\to0\\
+ & =\frac{1}{E-{\opr{H}}_{0}},\qquad\qquad\ E={E}_{0}+\i\varepsilon
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ce qui donne l'équation :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}=\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+{\opr{G}}_{0}^{+}(E)\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Connu par l'équation de 
+\shape smallcaps
+Lippmann-Schwinger
+\shape default
+.
+ Si on applique 
+\begin_inset Formula $E-{\opr{H}}_{0}$
+\end_inset
+
+ à 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+, tel que :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\left(E-{\opr{H}}_{0}\right)\ket{{\Psi}_{{\vec{k}}_{f}}^{+}} & =\left(E-{\opr{H}}_{0}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\underbrace{\left(E-{\opr{H}}_{0}\right){\opr{G}}_{0}^{+}(E)}_{\opr{\identity}}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}\\
+ & =\left(E-{\opr{H}}_{0}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On regroupe les termes en 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\left(E-{\opr{H}}_{0}-\opr{V}\right)\ket{{\Psi}_{{\vec{k}}_{f}}^{+}} & =\left(E-{\opr{H}}_{0}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\\
+ & =\left(E-{\opr{H}}_{0}-\opr{V}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\implies\ket{{\Psi}_{{\vec{k}}_{f}}^{+}} & =\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\frac{1}{E-{\opr{H}}_{0}-\opr{V}}\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\\
+ & =\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\frac{1}{{E}_{0}-\opr{H}+\i\varepsilon}\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}},\qquad\opr{H}={\opr{H}}_{0}+\opr{V}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cette dernière expression fait intervenir l'Hamiltonien avec interaction
+ : 
+\begin_inset Formula $\opr{H}={\opr{H}}_{0}+\opr{V}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Par conséquent, l'état stationnaire de diffusion 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ qui satisfait l'équation de 
+\shape smallcaps
+Lippmann-Schwinger
+\shape default
+ vérifie aussi cette 2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ème
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ forme.
+\end_layout
+
+\begin_layout Subsection
+Opérateur ou matrice de transition
+\end_layout
+
+\begin_layout Standard
+On appelle 
+\begin_inset Formula $\opr{T}$
+\end_inset
+
+ l'opérateur de transition, l'opérateur vérifier la relation suivante :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}=\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En introduisant la 1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ère
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ expression de 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ dans le second membre :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}} & =\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}\\
+ & =\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\\
+ & =\left(\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+D'où 
+\begin_inset Formula $\opr{T}=\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}$
+\end_inset
+
+, c'est la 3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ème
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ forme de l'équation de 
+\shape smallcaps
+Lippmann-Schwinger
+\shape default
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De même, en introduisant la 2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ème
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ expression de 
+\begin_inset Formula $\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}$
+\end_inset
+
+ dans le second membre :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}} & =\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}+\opr{V}\frac{1}{{E}_{0}-\opr{H}+\i\varepsilon}\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\\
+ & =\left(\opr{V}+\opr{V}{\opr{G}}^{+}(E)\opr{V}\right)\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}},\qquad{\opr{G}}^{+}(E)=\frac{1}{{E}_{0}-\opr{H}+\i\varepsilon}
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On obtient la 4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ème
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ forme de l'équation de 
+\shape smallcaps
+Lippmann-Schwinger
+\shape default
+, avec 
+\begin_inset Formula $\opr{T}=\opr{V}+\opr{V}{\opr{G}}^{+}(E)\opr{V}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Développement de 
+\shape smallcaps
+Born
+\end_layout
+
+\begin_layout Standard
+Le développement de 
+\shape smallcaps
+Born
+\shape default
+ consiste à réinjecter l'expression de 
+\begin_inset Formula $\opr{T}$
+\end_inset
+
+ auto-cohérente un certain nombre de fois, on obtient donc successivement
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}\opr{T} & =\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}\\
+ & =\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\left(\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}\right)\\
+ & =\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}{\opr{G}}_{0}^{+}(E)\opr{T}\\
+ & =\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}+\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}{\opr{G}}_{0}^{+}(E)\opr{V}+\cdots
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pour que la série converge vite, 
+\begin_inset Formula $V$
+\end_inset
+
+ doit être faible devant l'énergie initial 
+\begin_inset Formula ${E}_{0}$
+\end_inset
+
+ (
+\begin_inset Formula $V\ll{E}_{0}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+L'amplitude de diffusion en fonction de 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+texorpdfstring{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\opr{T}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}{
+\end_layout
+
+\end_inset
+
+T
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On a déjà trouvé :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}(\theta,\ \phi)=-\frac{m}{{\hbar}^{2}}(2\pi)^{2}\bra{{\vec{k}}_{f}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Or selon la définition de 
+\begin_inset Formula $\opr{T}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}=\opr{V}\ket{{\Psi}_{{\vec{k}}_{f}}^{+}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Alors :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}(\theta,\ \phi)=-\frac{m}{{\hbar}^{2}}(2\pi)^{2}\bra{{\vec{k}}_{f}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\opr{T}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+au 1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+up
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ère
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ ordre : 
+\begin_inset Formula $\opr{T}=\opr{V}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi) & =-\frac{m}{{\hbar}^{2}}(2\pi)^{2}\bra{{\vec{k}}_{f}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\opr{V}\ket{{\vec{k}}_{0}\vphantom{{\Psi}_{{\vec{k}}_{f}}^{+}}}\\
+ & =-\frac{m}{{\hbar}^{2}}\frac{(2\pi)^{2}}{(2\pi)^{3}}\int{\e}^{-\i{\vec{k}}_{f}\cdot\vec{r}}V(\vec{r}){\e}^{\i{\vec{k}}_{0}\cdot\vec{r}}\ {\diff}^{3}r\\
+ & =-\frac{m}{{\hbar}^{2}}\frac{1}{2\pi}\int{\e}^{-\i\left({\vec{k}}_{f}-{\vec{k}}_{0}\right)\cdot\vec{r}}V(\vec{r})\ {\diff}^{3}r
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On pose 
+\begin_inset Formula ${\vec{k}}_{f}-{\vec{k}}_{0}=\vec{q}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{m}{2\pi{\hbar}^{2}}\int{\e}^{-\i\vec{q}\cdot\vec{r}}V(\vec{r})\ {\diff}^{3}r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dans le cas d'un potentiel central 
+\begin_inset Formula $V(\vec{r})=V(r)$
+\end_inset
+
+, on trouve :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{split}{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi) & =-\frac{m}{2\pi{\hbar}^{2}}\int_{0}^{\infty}V(r){r}^{2}\diff r\int_{0}^{2\pi}\diff\phi\int_{0}^{\pi}{\e}^{-\i qr\cos{\theta}}\sin{\theta}\diff\theta\\
+ & =-\frac{m}{2\pi{\hbar}^{2}}\int_{0}^{\infty}V(r){r}^{2}\diff r\int_{0}^{2\pi}\diff\phi\int_{-1}^{+1}{\e}^{-\i qr\cos{\theta}}\diff\cos{\theta}\\
+ & =-\frac{2m}{{\hbar}^{2}}\int_{0}^{\infty}V(r){r}^{2}\frac{\sin{qr}}{qr}\ \diff r
+\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $q\to0$
+\end_inset
+
+, alors 
+\begin_inset Formula $\frac{\sin{qr}}{qr}\to1$
+\end_inset
+
+, d'où :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+{f}_{{\vec{k}}_{f}}^{\mathcal{B}}(\theta,\ \phi)=-\frac{2m}{{\hbar}^{2}}\int_{0}^{\infty}V(r){r}^{2}\ \diff r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
